@@ -1,19 +1,21 @@
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.0.2)
 cmake_policy(SET CMP0020 OLD)
 
 project(SPARK_LIB)
 set(SPARK_LIB_NAME ${PROJECT_NAME})
 
+find_package(OpenGL REQUIRED)
+find_package(FreeType REQUIRED)
 
-FIND_LIBRARY(OpenGL_LIBRARY OpenGL)
-
-message("message: ${OpenGL_LIBRARY}")
+message("message OpenGL include dir: ${OpenGL_INCLUDE_DIR}")
+message("message FREETYPE_INCLUDE_DIR: ${FREETYPE_INCLUDE_DIR}")
+message("message gl libs: ${OPENGL_gl_LIBRARY}")
 
 include_directories(
     ../include
-    ${OpenGL_LIBRARY}
-    /usr/local/include/
-    /usr/local/include/freetype2
+    ${OpenGL_INCLUDE_DIR}
+    #/usr/local/include/
+    ${FREETYPE_INCLUDE_DIR}
 )
 
 file(
@@ -37,20 +39,10 @@ add_library(
 	${SPARK_LIB_headers}
 )
 
-#add_executable(
-#    demo
-#    demos/src/BasicDemo.cpp
-#    ${SPARK_LIB_headers}
-#)
+target_link_libraries(
+    ${SPARK_LIB_NAME}
+    #${OpenGL_LIBRARY}
+    ${OPENGL_gl_LIBRARY}
+    ${OPENGL_glu_LIBRARY}
+)
 
-#add_dependencies(
-#    demo
-#    ${SPARK_LIB_NAME}
-#    /Users/dovgalkostiantyn/Desktop/libSDL2Sim.a
-#)
-
-#target_link_libraries(
-#    demo
-#    ${OpenGL_LIBRARY}
-#    ${SDL_LIBRARY}
-#)

@@ -29,12 +29,13 @@
 #if defined(WIN32) || defined(_WIN32)
 #include <windows.h>
 #endif
-#include <GL/gl.h>
-#include <GL/glu.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 
 // external libs
 #include <SDL.h>
 #include <FTGL/ftgl.h>
+#include "SDL_opengl.h"
 
 // SPARK lib
 #include <SPK.h>
@@ -196,8 +197,8 @@ void drawBoundingBox(const Group& group)
 void renderFirstFrame()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	SDL_GL_SwapBuffers();
-	SDL_GL_SwapBuffers();
+	//+SDL_GL_SwapBuffers();
+	//+SDL_GL_SwapBuffers();
 }
 
 // Renders the scene
@@ -238,7 +239,7 @@ void render()
 		fontPtr->Render(strFps.c_str(),-1,FTPoint(4.0f,8.0f));
 	}
 
-	SDL_GL_SwapBuffers();
+	//+SDL_GL_SwapBuffers();
 }
 
 // Main function
@@ -247,7 +248,7 @@ int main(int argc, char *argv[])
 #if defined(DEBUG) | defined(_DEBUG)
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 #endif
-
+  return 0;
 	// random seed
 	randomSeed = static_cast<unsigned int>(time(NULL));
 	
@@ -259,25 +260,27 @@ int main(int argc, char *argv[])
 
 	// inits SDL
 	SDL_Init(SDL_INIT_VIDEO);
-	SDL_WM_SetCaption("SPARK Basic Demo",NULL);
+	//SDL_WM_SetCaption("SPARK Basic Demo",NULL);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER,1);	// double buffering
 
 	// vsync
-	SDL_GL_SetAttribute(SDL_GL_SWAP_CONTROL,0);
+	//+SDL_GL_SetAttribute(SDL_GL_SWAP_CONTROL,0);
 	
-	SDL_SetVideoMode(0,0,32,SDL_OPENGL | SDL_FULLSCREEN);
+	//+SDL_SetVideoMode(0,0,32, SDL_OPENGL | SDL_FULLSCREEN);
 	SDL_ShowCursor(0);
 
-	SDL_Surface screen = *SDL_GetVideoSurface();
-	renderFirstFrame();
+	//+SDL_Surface screen = *SDL_GetVideoSurface();
+  screenWidth = 640;
+  screenHeight = 480;
+	SDL_Window* window = SDL_CreateWindow("OpenGL Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenWidth, screenHeight, SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN);
+  renderFirstFrame();
 
 	// inits openGL
-	screenWidth = screen.w;
-	screenHeight = screen.h;
-	screenRatio = (float)screen.w / (float)screen.h;
+
+	screenRatio = (float)screenWidth / (float)screenHeight;
 	
 	glClearColor(0.0f,0.0f,0.0f,1.0f);
-	glViewport(0,0,screen.w,screen.h);
+	glViewport(0,0,screenWidth,screenHeight);
 
 	// Loads texture font
 	FTGLTextureFont font = FTGLTextureFont("res/font.ttf");
@@ -433,10 +436,10 @@ int main(int argc, char *argv[])
 			// Zoom in and out
 			if (event.type == SDL_MOUSEBUTTONDOWN)
 			{
-				if (event.button.button == SDL_BUTTON_WHEELDOWN)
-					camPosZ = min(10.0f,camPosZ + 0.5f);
-				if (event.button.button == SDL_BUTTON_WHEELUP)
-					camPosZ = max(0.5f,camPosZ - 0.5f);
+				//if (event.button.button == SDL_BUTTON_WHEELDOWN)
+				//	camPosZ = min(10.0f,camPosZ + 0.5f);
+				//if (event.button.button == SDL_BUTTON_WHEELUP)
+				//	camPosZ = max(0.5f,camPosZ - 0.5f);
 			}
 		}
 
