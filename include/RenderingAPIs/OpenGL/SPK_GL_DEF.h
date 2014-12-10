@@ -47,7 +47,7 @@
 #endif
 
 #if defined(__APPLE__)
-#include <OpenGL/gl.h>
+#include <ES1/gl.h>
 #elif defined(macintosh)
 #include <gl.h>
 #else

@@ -238,7 +238,7 @@ namespace GL
 #endif
 
 #if defined(__APPLE__) || defined(macintosh)
-	void* GLExtHandler::SPK_NSGLGetProcAddress(const char* name)
+/*	void* GLExtHandler::SPK_NSGLGetProcAddress(const char* name)
 	{
 		NSSymbol symbol;
 		char *symbolName;
@@ -255,6 +255,7 @@ namespace GL
 
 		return symbol ? NSAddressOfSymbol (symbol) : NULL; 
 	}
+*/
 #endif
 
 	void GLExtHandler::setPixelPerUnit(float fovy,int screenHeight)

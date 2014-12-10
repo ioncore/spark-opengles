@@ -228,7 +228,7 @@ namespace GL
 		glVertexPointer(3,GL_FLOAT,7 * sizeof(float),gpuBuffer);
 		glColorPointer(4,GL_FLOAT,7 * sizeof(float),gpuBuffer + 3);
 
-		glDrawArrays(GL_QUADS,0,group.getNbParticles() << 2);
+		//markupipglDrawArrays(GL_QUADS,0,group.getNbParticles() << 2);
 
 		glDisableClientState(GL_VERTEX_ARRAY);
 		glDisableClientState(GL_COLOR_ARRAY);

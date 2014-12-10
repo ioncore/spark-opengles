@@ -62,7 +62,7 @@ namespace GL
 
 	void GLRenderer::saveGLStates()
 	{
-		glPushAttrib(GL_POINT_BIT |
+		/*markerpiglPushAttrib(GL_POINT_BIT |
 			GL_LINE_BIT |
 			GL_ENABLE_BIT |
 			GL_COLOR_BUFFER_BIT |
@@ -71,10 +71,11 @@ namespace GL
 			GL_DEPTH_BUFFER_BIT |
 			GL_LIGHTING_BIT |
 			GL_POLYGON_BIT);
+        */
 	}
 
 	void GLRenderer::restoreGLStates()
 	{
-		glPopAttrib();
+		//markerpiglPopAttrib();
 	}
 }}

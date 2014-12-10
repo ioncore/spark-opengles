@@ -29,8 +29,11 @@
 #if defined(WIN32) || defined(_WIN32)
 #include <windows.h>
 #endif
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
+//#include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
+
+#include <ES3/gl.h>
+#include <ES3/gl.h>
 
 // external libs
 #include <SDL.h>
@@ -114,14 +117,16 @@ bool loadTexture(GLuint& index,char* path,GLuint type,GLuint clamp,bool mipmap)
 	if (mipmap)
 	{
 		glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_LINEAR);
-
-		gluBuild2DMipmaps(GL_TEXTURE_2D,
+        glTexImage2D(GL_TEXTURE_2D, 0, type, particleImg->w,particleImg->h, 0, type, GL_UNSIGNED_BYTE, particleImg->pixels);
+		/*
+        gluBuild2DMipmaps(GL_TEXTURE_2D,
 			type,
 			particleImg->w,
 			particleImg->h,
 			type,
 			GL_UNSIGNED_BYTE,
 			particleImg->pixels);
+        i*/
 	}
 	else
 	{
@@ -153,7 +158,22 @@ void drawBoundingBox(const Group& group)
 	Vector3D AABBMax = group.getAABBMax();
 
 	glDisable(GL_TEXTURE_2D);
-	glBegin(GL_LINES);
+
+
+    const GLfloat triangleVertices[] = {
+        0.0f,   1.0f,   0.0f,
+        -1.0f,  -1.0f,  0.0f,
+        1.0f,   -1.0f,  0.0f
+    };
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, triangleVertices);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 3);
+
+
+	
+    /*
+    glBegin(GL_LINES);
 	glColor3f(1.0f,0.0f,0.0f);
 
 	glVertex3f(AABBMin.x,AABBMin.y,AABBMin.z);
@@ -192,6 +212,7 @@ void drawBoundingBox(const Group& group)
 	glVertex3f(AABBMax.x,AABBMin.y,AABBMin.z);
 	glVertex3f(AABBMax.x,AABBMin.y,AABBMax.z);
 	glEnd();
+    */
 }
 
 void renderFirstFrame()
@@ -200,7 +221,29 @@ void renderFirstFrame()
 	//+SDL_GL_SwapBuffers();
 	//+SDL_GL_SwapBuffers();
 }
+/*void gluPerspective(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar)
+{
+    GLfloat m[4][4];
+    GLfloat sine, cotangent, deltaZ;
+    GLfloat radians = fovy / 2 * 3.14 / 180;
 
+    deltaZ = zFar - zNear;
+    sine = sin(radians);
+    if ((deltaZ == 0) || (sine == 0) || (aspect == 0))
+    {
+        return;
+    }
+    cotangent = cos(radians) / sine;
+
+    __gluMakeIdentityf(&m[0][0]);
+    m[0][0] = cotangent / aspect;
+    m[1][1] = cotangent;
+    m[2][2] = -(zFar + zNear) / deltaZ;
+    m[2][3] = -1;
+    m[3][2] = -2 * zNear * zFar / deltaZ;
+    m[3][3] = 0;
+    glMultMatrixf(&m[0][0]);
+}*/
 // Renders the scene
 void render()
 {
@@ -208,7 +251,7 @@ void render()
 	
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(45,screenRatio,0.01f,20.0f);
+	//gluPerspective(45,screenRatio,0.01f,20.0f);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();   
@@ -229,11 +272,11 @@ void render()
 
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		gluOrtho2D(0,screenWidth,0,screenHeight);
+		//gluOrtho2D(0,screenWidth,0,screenHeight);
 
 		// Renders info strings
 		glDisable(GL_DEPTH_TEST);
-		glColor3f(1.0f,1.0f,1.0f);
+		//glColor3f(1.0f,1.0f,1.0f);
 		if (drawText == 2)
 			fontPtr->Render(strNbParticles.c_str(),-1,FTPoint(4.0f,40.0f));
 		fontPtr->Render(strFps.c_str(),-1,FTPoint(4.0f,8.0f));
@@ -291,7 +334,7 @@ int main(int argc, char *argv[])
 
 	// Loads particle texture
 	GLuint textureParticle;
-	if (!loadTexture(textureParticle,"res/point.bmp",GL_ALPHA,GL_CLAMP,false))
+	if (!loadTexture(textureParticle,"res/point.bmp",GL_ALPHA,/*GL_CLAMP*/GL_CLAMP_TO_EDGE,false))
 		return 1;
 
 	// Inits Particle Engine
