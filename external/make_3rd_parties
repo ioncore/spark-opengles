@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# This script build third party dependencies 
+# for following systems and architectures:
+# - mac os x        in bin_mac_osx          directory
+# - ios7 device     in bin_ios7             directory
+# - ios7 simulator  in bin_ios7_simulator   directory
+# - ios8 device     in bin_ios8             directory
+# - ios8 simulator  in bin_ios8_simulator   directory
+
+# Questions:
+# - whether we need absolute path to directory?
+# - option with full clean
+# - path to toolchain
+
+IOS_TOOLCHAIN_FILE=/Users/dovgalkostiantyn/projects/spark-opengles/cmake/iOS.cmake
+
+MAC_OSX_BINARY_DIR=bin_mac_osx
+IOS7_BINARY_DIR=bin_ios7
+IOS7_SIMULATOR_BINARY_DIR=bin_ios7_simulator
+IOS8_BINARY_DIR=bin_ios8
+IOS8_SIMULATOR_BINARY_DIR=bin_ios8_simulator
+
+
+mkdir -p $MAC_OSX_BINARY_DIR
+mkdir -p $IOS7_BINARY_DIR
+#mkdir -p $IOS7_BINARY_DIR
+#mkdir -p $IOS8_BINARY_DIR
+#mkdir -p $IOS8_SIMULATOR_BINARY_DIR
+
+cd $MAC_OSX_BINARY_DIR
+cmake .. -GXcode
+
+cd ..
+
+cd $IOS7_BINARY_DIR
+cmake .. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE -GXcode
+cd ..
