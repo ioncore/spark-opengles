@@ -95,7 +95,7 @@ if (NOT DEFINED IOS_PLATFORM)
 	set (IOS_PLATFORM "OS")
 endif (NOT DEFINED IOS_PLATFORM)
 set (IOS_PLATFORM ${IOS_PLATFORM} CACHE STRING "Type of iOS Platform")
-set(IOS_PLATFORM "SIMULATOR")########################################################
+
 # Check the platform selection and setup for developer root
 if (${IOS_PLATFORM} STREQUAL "OS")
 	set (IOS_PLATFORM_LOCATION "iPhoneOS.platform")

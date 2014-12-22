@@ -13,7 +13,16 @@
 # - option with full clean
 # - path to toolchain
 
-IOS_TOOLCHAIN_FILE=/Users/dovgalkostiantyn/projects/spark-opengles/cmake/iOS.cmake
+IOS_TOOLCHAIN_FILE="../cmake/iOS.cmake"
+
+IOS_SDK_ROOT="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs"
+SIMULATOR_SDK_ROOT="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs"
+
+IOS_SDK_71="iPhoneOS7.1.sdk"
+IOS_SDK_81="iPhoneOS8.1.sdk"
+
+SIMULAROT_SDK_71="iPhoneSimulator7.1.sdk"
+SIMULAROT_SDK_71="iPhoneSimulator8.1.sdk"
 
 MAC_OSX_BINARY_DIR=bin_mac_osx
 IOS7_BINARY_DIR=bin_ios7
@@ -24,15 +33,30 @@ IOS8_SIMULATOR_BINARY_DIR=bin_ios8_simulator
 
 mkdir -p $MAC_OSX_BINARY_DIR
 mkdir -p $IOS7_BINARY_DIR
-#mkdir -p $IOS7_BINARY_DIR
-#mkdir -p $IOS8_BINARY_DIR
-#mkdir -p $IOS8_SIMULATOR_BINARY_DIR
+mkdir -p $IOS7_SIMULATOR_BINARY_DIR
+mkdir -p $IOS8_BINARY_DIR
+mkdir -p $IOS8_SIMULATOR_BINARY_DIR
 
+# mac os x
 cd $MAC_OSX_BINARY_DIR
 cmake .. -GXcode
-
 cd ..
 
+# iphone sdk7.1
 cd $IOS7_BINARY_DIR
-cmake .. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE -GXcode
+cmake .. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE \ 
+  -DIOS_PLATFORM="OS" \ 
+  -DCMAKE_IOS_SDK_ROOT=$IOS_SDK_ROOT/$IOS_SDK_71 \ 
+  -GXcode
 cd ..
+
+# iphone simulator 7.1
+
+cd $IOS7_SIMULATOR_BINARY_DIR
+cmake .. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE \
+  -DIOS_PLATFORM="SIMULATOR"
+  -DCMAKE_IOS_SDK_ROOT=$SIMULATOR_SDK_ROOT/$SIMULAROT_SDK_71 \
+  -GXcode
+
+
+
