@@ -2,6 +2,9 @@
 bin/
 xcode_build/
 ios_build/
-external/bin_ios7/
-external/bin_ios7_simulator/
-external/bin_mac_osx/
+external/bin/bin_ios7/
+external/bin/bin_ios7_simulator/
+external/bin/bin_ios7/
+external/bin/bin_ios7_simulator/
+external/vin/bin_mac_osx/
+
