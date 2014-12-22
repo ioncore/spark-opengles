@@ -1,0 +1,73 @@
+/*
+ *  stable.pch
+ *  ToolSDL
+ *
+ *  Created by Seb on 03/01/06.
+ *  Copyright 2006 The Old Game Factory. All rights reserved.
+ *
+ */
+#ifdef __cplusplus
+#ifndef __STABLE_PCH__
+#define __STABLE_PCH__
+
+///////////////////////////////////////////
+//	Standard headers
+
+#include <cassert>
+#include <cmath>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <limits>
+#include <algorithm>
+#include <fstream>
+#include <istream>
+#include <new>
+
+using std::istream;
+using std::ostream;
+using std::ifstream;
+using std::ios;
+using std::flush;
+using std::endl;
+using std::cout;
+using std::string;
+using std::vector;
+using std::map;
+using std::numeric_limits;
+using std::fill;
+
+
+//////////////////////
+//  API headers
+
+#include "OpenGL/glu.h"	// Mac OS X OpenGL header location
+//#include "GL/glu.h"	// Other platforms OpenGL header location
+#include "SDL.h"
+
+
+//////////////////////////////////////////////////////
+//  Boost headers (cf. http://www.boost.org)
+
+#include <boost/config.hpp>
+#include <boost/shared_ptr.hpp>
+using boost::shared_ptr;
+#include "boost/filesystem/operations.hpp" // includes boost/filesystem/path.hpp
+#include "boost/filesystem/fstream.hpp"    // ditto
+using boost::filesystem::path;
+#include <boost/spirit/core.hpp>
+#include <boost/spirit/utility/confix.hpp>
+#include <boost/spirit/iterator/file_iterator.hpp>
+#include <boost/spirit/symbols/symbols.hpp>
+
+
+
+////////////////////////////////////////////
+// Heavily shared & stable TooL headers
+
+#include "Logger.hpp"
+
+
+#endif //__STABLE_PCH__
+#endif //__cplusplus
