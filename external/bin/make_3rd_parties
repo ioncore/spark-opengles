@@ -84,7 +84,7 @@ if [ -n "$BUILD_IOS8" ] ; then
   mkdir -p $IOS8_BINARY_DIR
   cd $IOS8_BINARY_DIR
   cmake ../.. -DCMAKE_TOOLCHAIN_FILE="$IOS_TOOLCHAIN_FILE" \
-    -DIOS_PLATFORM="OS" \ 
+    -DIOS_PLATFORM="OS" \
     -DCMAKE_IOS_SDK_ROOT="$IOS_SDK_ROOT/$IOS_SDK_81" \
     -GXcode
   cd ..
