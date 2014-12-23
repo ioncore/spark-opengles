@@ -24,6 +24,8 @@
 # Questions:
 # - option with full clean
 
+MIN_OS_VERSION=7.0 ../SDL2/build-scripts/iosbuild.sh
+
 IOS_TOOLCHAIN_FILE="../cmake/iOS.cmake"
 
 IOS_SDK_ROOT="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs"
