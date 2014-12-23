@@ -59,19 +59,20 @@ prepare_environment() {
     CFLAGS="-g -O2 -pipe -no-cpp-precomp -isysroot $SDK_PATH \
             -miphoneos-version-min=$MIN_OS_VERSION -I$SDK_PATH/usr/include/"
     LDFLAGS="-L$SDK_PATH/usr/lib/ -isysroot $SDK_PATH \
-             -miphoneos-version-min=$MIN_OS_VERSION -static-libgcc"
+             -miphoneos-version-min=$MIN_OS_VERSION -static-libstdc++"
     export CXXFLAGS="$CFLAGS"
-    export CXXCPP="$DEV_PATH/usr/bin/llvm-cpp-4.2"
+    IPHONE_TARGET="iphoneos"
+    export CXXCPP=$(xcrun -find -sdk $IPHONE_TARGET cpp)
     export CPP="$CXXCPP"
-    export CXX="$DEV_PATH/usr/bin/llvm-g++-4.2"
-    export CC="$DEV_PATH/usr/bin/llvm-gcc-4.2"
-    export LD="$DEV_PATH/usr/bin/ld"
-    export AR="$DEV_PATH/usr/bin/ar"
-    export AS="$DEV_PATH/usr/bin/ls"
-    export NM="$DEV_PATH/usr/bin/nm"
-    export RANLIB="$DEV_PATH/usr/bin/ranlib"
-    export STRIP="$DEV_PATH/usr/bin/strip"
-    
+    export CC=$(xcrun -find -sdk $IPHONE_TARGET clang)
+    export CXX=$(xcrun -find -sdk $IPHONE_TARGET clang++)
+    export LD=$(xcrun -find -sdk $IPHONE_TARGET ld)
+    export AR=$(xcrun -find -sdk $IPHONE_TARGET ar)
+    export AS=$(xcrun -find -sdk $IPHONE_TARGET ls)
+    export NM=$(xcrun -find -sdk $IPHONE_TARGET nm)
+    export RANLIB=$(xcrun -find -sdk $IPHONE_TARGET ranlib)
+    export STRIP=$(xcrun -find -sdk $IPHONE_TARGET strip)
+
     # We dynamically load X11, so using the system X11 headers is fine.
     CONFIG_FLAGS="--disable-shared --enable-static"
     
@@ -87,6 +88,18 @@ prepare_environment() {
             export LDFLAGS="$LDFLAGS -arch armv7"
             ;;
         i386)
+    IPHONE_TARGET="iphonesimulator"
+    export CXXCPP=$(xcrun -find -sdk $IPHONE_TARGET cpp)
+    export CPP="$CXXCPP"
+    export CC=$(xcrun -find -sdk $IPHONE_TARGET clang)
+    export CXX=$(xcrun -find -sdk $IPHONE_TARGET clang++)
+    export LD=$(xcrun -find -sdk $IPHONE_TARGET ld)
+    export AR=$(xcrun -find -sdk $IPHONE_TARGET ar)
+    export AS=$(xcrun -find -sdk $IPHONE_TARGET ls)
+    export NM=$(xcrun -find -sdk $IPHONE_TARGET nm)
+    export RANLIB=$(xcrun -find -sdk $IPHONE_TARGET ranlib)
+    export STRIP=$(xcrun -find -sdk $IPHONE_TARGET strip)
+
             export CONFIG_FLAGS="$CONFIG_FLAGS --host=i386-apple-darwin"
             export CFLAGS="$CFLAGS -arch i386"
             export LDFLAGS="$LDFLAGS -arch i386"
@@ -122,10 +135,10 @@ else
 fi
 case $phase in
     all)
-        configure_armv6="yes"
+#        configure_armv6="yes"
         configure_armv7="yes"
         configure_i386="yes"
-        make_armv6="yes"
+#        make_armv6="yes"
         make_armv7="yes"
         make_i386="yes"
         merge="yes"
@@ -196,8 +209,15 @@ done
 #
 # Build the armv6 binary
 #
+echo "Preparing armv6 environment"
 prepare_environment "armv6"
+echo "Done preparing armv6 environment"
 if test x$configure_armv6 = xyes; then
+    echo "CC=$CC"
+    echo "CXX=$CXX"
+    echo "CFLAGS=$CFLAGS"
+    echo "LDFLAGS=$LDFLAGS"
+
     (cd build/armv6 && \
      sh ../../configure $CONFIG_FLAGS CC="$CC" CXX="$CXX" CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS") || exit 2
      # configure is not yet fully ready for iOS, some manual patching is required
@@ -250,9 +270,11 @@ if test x$merge = xyes; then
     sh $auxdir/mkinstalldirs build/$output
     cd build
     target=`find . -mindepth 4 -maxdepth 4 -type f -name '*.dylib' | head -1 | sed 's|.*/||'`
-    (lipo -create -o $output/libSDL2.a armv6/build/.libs/libSDL2.a armv7/build/.libs/libSDL2.a i386/build/.libs/libSDL2.a &&
-     lipo -create -o $output/libSDL2main.a armv6/build/libSDL2main.a armv7/build/libSDL2main.a i386/build/libSDL2main.a &&
-     cp -r armv6/include ios
+#    (lipo -create -o $output/libSDL2.a armv6/build/.libs/libSDL2.a armv7/build/.libs/libSDL2.a i386/build/.libs/libSDL2.a &&
+#     lipo -create -o $output/libSDL2main.a armv6/build/libSDL2main.a armv7/build/libSDL2main.a i386/build/libSDL2main.a &&
+    (lipo -create -o $output/libSDL2.a armv7/build/.libs/libSDL2.a i386/build/.libs/libSDL2.a &&
+     lipo -create -o $output/libSDL2main.a armv7/build/libSDL2main.a i386/build/libSDL2main.a &&
+     cp -r armv7/include ios
      echo "Build complete!" &&
      echo "Files can be found under the build/ios directory.") || exit 4
     cd ..
