@@ -8,7 +8,6 @@
 # - ios8 device     in bin_ios8             directory
 # - ios8 simulator  in bin_ios8_simulator   directory
 
-
 # To build particular OS/Architecture 
 # please set one or more variables:
 # - BUILD_MAC_OSX
@@ -33,8 +32,8 @@ SIMULATOR_SDK_ROOT="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneS
 IOS_SDK_71="iPhoneOS7.1.sdk"
 IOS_SDK_81="iPhoneOS8.1.sdk"
 
-SIMULAROT_SDK_71="iPhoneSimulator7.1.sdk"
-SIMULAROT_SDK_71="iPhoneSimulator8.1.sdk"
+SIMULATOR_SDK_71="iPhoneSimulator7.1.sdk"
+SIMULATOR_SDK_81="iPhoneSimulator8.1.sdk"
 
 MAC_OSX_BINARY_DIR=bin_mac_osx
 IOS7_BINARY_DIR=bin_ios7
@@ -43,11 +42,11 @@ IOS8_BINARY_DIR=bin_ios8
 IOS8_SIMULATOR_BINARY_DIR=bin_ios8_simulator
 
 if [ -n "$BUILD_ALL" ] ; then
-  BUILD_MAC_OSX="true"
-  BUILD_IOS7= "true"
-  BUILD_IOS7_SIMULATOR="true"
-  BUILD_IOS8= "true"
-  BUILD_IOS8_SIMULATOR="true"
+  BUILD_MAC_OSX=true
+  BUILD_IOS7=true
+  BUILD_IOS7_SIMULATOR=true
+  BUILD_IOS8=true
+  BUILD_IOS8_SIMULATOR=true
 fi
 
 # mac os x
@@ -70,14 +69,13 @@ if [ -n "$BUILD_IOS7" ] ; then
   cd ..
 fi
 
-
 # iphone simulator 7.1
 if [ -n "$BUILD_IOS7_SIMULATOR" ] ; then
   mkdir -p $IOS7_SIMULATOR_BINARY_DIR
   cd $IOS7_SIMULATOR_BINARY_DIR
   cmake ../.. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE \
-    -DIOS_PLATFORM="SIMULATOR"
-    -DCMAKE_IOS_SDK_ROOT=$SIMULATOR_SDK_ROOT/$SIMULAROT_SDK_71 \
+    -DIOS_PLATFORM="SIMULATOR" \
+    -DCMAKE_IOS_SDK_ROOT=$SIMULATOR_SDK_ROOT/$SIMULATOR_SDK_71 \
     -GXcode
   cd ..
 fi
@@ -88,7 +86,7 @@ if [ -n "$BUILD_IOS8" ] ; then
   cd $IOS8_BINARY_DIR
   cmake ../.. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE \ 
     -DIOS_PLATFORM="OS" \ 
-    -DCMAKE_IOS_SDK_ROOT=$IOS_SDK_ROOT/$IOS_SDK_81 \ 
+    -DCMAKE_IOS_SDK_ROOT=$IOS_SDK_ROOT/$IOS_SDK_81 \
     -GXcode
   cd ..
 fi
@@ -98,8 +96,8 @@ if [ -n "$BUILD_IOS8_SIMULATOR" ] ; then
   mkdir -p $IOS8_SIMULATOR_BINARY_DIR
   cd $IOS8_SIMULATOR_BINARY_DIR
   cmake ../.. -DCMAKE_TOOLCHAIN_FILE=$IOS_TOOLCHAIN_FILE \
-    -DIOS_PLATFORM="SIMULATOR"
-    -DCMAKE_IOS_SDK_ROOT=$SIMULATOR_SDK_ROOT/$SIMULAROT_SDK_81 \
+    -DIOS_PLATFORM="SIMULATOR" \
+    -DCMAKE_IOS_SDK_ROOT=$SIMULATOR_SDK_ROOT/$SIMULATOR_SDK_81 \
     -GXcode
   cd ..
 fi
