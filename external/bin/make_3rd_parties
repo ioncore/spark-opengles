@@ -56,7 +56,6 @@ if [ -n "$BUILD_MAC_OSX" ] ; then
   cmake ../.. -GXcode
   cd ..
 fi
-exit
 
 # iphone sdk7.1
 if [ -n "$BUILD_IOS7" ] ; then
