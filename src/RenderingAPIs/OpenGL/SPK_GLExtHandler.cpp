@@ -305,7 +305,7 @@ namespace GL
 			SPK_glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION,QUADRATIC_WORLD);
 		}
 
- 		glPointSize(POINT_SIZE_CURRENT);
+ 		//+glPointSize(POINT_SIZE_CURRENT);
 		SPK_glPointParameterf(GL_POINT_SIZE_MIN,POINT_SIZE_MIN);
 		SPK_glPointParameterf(GL_POINT_SIZE_MAX,POINT_SIZE_MAX);
 	}

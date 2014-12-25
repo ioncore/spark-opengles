@@ -8,7 +8,7 @@
  */
 #ifndef __OBJPARSER_HPP__
 #define __OBJPARSER_HPP__
-
+#include "stable.pch"
 struct SObjGrammar {
 };
 

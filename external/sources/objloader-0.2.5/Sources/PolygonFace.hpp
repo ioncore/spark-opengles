@@ -9,7 +9,7 @@
 
 #ifndef __POLYGONFACE_H__
 #define __POLYGONFACE_H__
-
+#include "stable.pch"
 
 //
 struct SPolygonFace {

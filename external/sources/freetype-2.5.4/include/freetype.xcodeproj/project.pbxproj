@@ -1,0 +1,1363 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              9FA3DC42D6A240CFB232C19C /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = A5B15607347645FC82B4B6C6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            F36E036D2CFC4603A0DA0688 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            D67700CE80AD48DE831E7462 /* PBXTargetDependency */,
+                            1F6B5411111E4F9E9B93437D /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              7A378DB113BD4C72A9BA65CA /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = CB940FA4C29C4A7C89B2185E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            E4BFCF98167D461682BE18A4 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              3BE611CA69F54884A9A51DD6 /* dist */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 5C34C768F6094E0191B1FB0D /* Build configuration list for PBXAggregateTarget "dist" */;
+                     buildPhases = (
+                            A6B288C78BE34348B2E8CDA3 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            F755A7B51FCC401FBA0CF082 /* PBXTargetDependency */,
+                     );
+                     name = dist;
+                     productName = dist;
+              };
+              A2DBA0F495A14D5587E7954C /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 27C049027F384E83A76F0222 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            76810927CCD448A68BE817F4 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            2EC6EF7FBD1A4FC3B5FADB83 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              89CCECCE9F0B45D0931B9A11 /* package */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 9418784EDF004DDE93BE2825 /* Build configuration list for PBXAggregateTarget "package" */;
+                     buildPhases = (
+                            9B76DEE1702C46059FC6E8B7 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            EA70E647EA724EF0AD70CF7A /* PBXTargetDependency */,
+                     );
+                     name = package;
+                     productName = package;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+E11688716C8843AFA68F13BB /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = ECD93F15937548A78613BF84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+7F8CB70A73AA48A0AD9BFF6B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit/autofit.c */ = {isa = PBXBuildFile; fileRef = 1302D41FD22C47F6B299580D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit/autofit.c */; settings = { COMPILER_FLAGS = ""; }; };
+EA55B741A4214073B1DD2F68 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftadvanc.c */ = {isa = PBXBuildFile; fileRef = 69D418863808467E950D7528 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftadvanc.c */; settings = { COMPILER_FLAGS = ""; }; };
+5DA56A3DABA149D7B8323131 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbbox.c */ = {isa = PBXBuildFile; fileRef = 3CB7B7A736E34F998A1A8839 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbbox.c */; settings = { COMPILER_FLAGS = ""; }; };
+E49028FC3F3547A58F7955B3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbdf.c */ = {isa = PBXBuildFile; fileRef = F0C0859F9C39467AB9A7E621 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbdf.c */; settings = { COMPILER_FLAGS = ""; }; };
+FBAD4511D9E146E78AA9971C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbitmap.c */ = {isa = PBXBuildFile; fileRef = F2FD98CEBD5F4531B3FC39DD /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbitmap.c */; settings = { COMPILER_FLAGS = ""; }; };
+A815588BCC1B416EA0A52BFA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcalc.c */ = {isa = PBXBuildFile; fileRef = A310AB592EFE45C8B8132BDE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcalc.c */; settings = { COMPILER_FLAGS = ""; }; };
+C2907C7D1A5B4174B5A7DEA8 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcid.c */ = {isa = PBXBuildFile; fileRef = 03141095C2824534BED8BC03 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcid.c */; settings = { COMPILER_FLAGS = ""; }; };
+9F64E20032F14B679B740D41 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdbgmem.c */ = {isa = PBXBuildFile; fileRef = C76AF2D85C7E4633B89D04E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdbgmem.c */; settings = { COMPILER_FLAGS = ""; }; };
+9AD5EF826568460C9BB4452C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdebug.c */ = {isa = PBXBuildFile; fileRef = 1CFF50435FE4422784ECF8E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdebug.c */; settings = { COMPILER_FLAGS = ""; }; };
+72760F1D78FF419CBAD5784C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftfstype.c */ = {isa = PBXBuildFile; fileRef = BBD02B09F42E441BB571D526 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftfstype.c */; settings = { COMPILER_FLAGS = ""; }; };
+8D40BB7F688144ADA8DC0D88 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgasp.c */ = {isa = PBXBuildFile; fileRef = 391D7C1708BE4BCF9F4875B0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgasp.c */; settings = { COMPILER_FLAGS = ""; }; };
+738CA2A865AD4A5289549284 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgloadr.c */ = {isa = PBXBuildFile; fileRef = 34436DE19AF044A8862AEC84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgloadr.c */; settings = { COMPILER_FLAGS = ""; }; };
+4E95897D69BD46FCAF4997FA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftglyph.c */ = {isa = PBXBuildFile; fileRef = 1A345C48E6FC46B5A41C9C99 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftglyph.c */; settings = { COMPILER_FLAGS = ""; }; };
+35355649F4E547C6802F6687 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgxval.c */ = {isa = PBXBuildFile; fileRef = 90D681A1310B4DD0A19FF113 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgxval.c */; settings = { COMPILER_FLAGS = ""; }; };
+688F0F14B8804BBDA44C1E60 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftinit.c */ = {isa = PBXBuildFile; fileRef = 05A71FB008FC43CB88D3633F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftinit.c */; settings = { COMPILER_FLAGS = ""; }; };
+02A7C24598A64F6487107CB7 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftlcdfil.c */ = {isa = PBXBuildFile; fileRef = FC8B34759F8F449DB53F1380 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftlcdfil.c */; settings = { COMPILER_FLAGS = ""; }; };
+BDDD267C9C3447B6A975035C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftmm.c */ = {isa = PBXBuildFile; fileRef = 790A524A9B1749DF80290A4D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftmm.c */; settings = { COMPILER_FLAGS = ""; }; };
+E60A8C95C4314C89B9E15107 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftobjs.c */ = {isa = PBXBuildFile; fileRef = CB939796EBD14159AD5706B6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftobjs.c */; settings = { COMPILER_FLAGS = ""; }; };
+8E75F5FC8A524BC0A098FE00 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftotval.c */ = {isa = PBXBuildFile; fileRef = 58CE267DB4FB4F66951CED32 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftotval.c */; settings = { COMPILER_FLAGS = ""; }; };
+4DF7240B7D4A4CAF856E2C2C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftoutln.c */ = {isa = PBXBuildFile; fileRef = ED4AD8FD48CE4B58A07835F2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftoutln.c */; settings = { COMPILER_FLAGS = ""; }; };
+AA673C80EFF14E11B08833C3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpatent.c */ = {isa = PBXBuildFile; fileRef = 6303897A6F7346CEA9DFBA18 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpatent.c */; settings = { COMPILER_FLAGS = ""; }; };
+8FD4E2B8889E464A9876050B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpfr.c */ = {isa = PBXBuildFile; fileRef = 8E500A402FFC4311914A38A6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpfr.c */; settings = { COMPILER_FLAGS = ""; }; };
+EE5B107586E4478CBB5F7620 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftrfork.c */ = {isa = PBXBuildFile; fileRef = B9836BF0771A43EEB754018B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftrfork.c */; settings = { COMPILER_FLAGS = ""; }; };
+2078158EFD814134A95F085B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsnames.c */ = {isa = PBXBuildFile; fileRef = 3615FF3FDCE4420493E1D9C9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsnames.c */; settings = { COMPILER_FLAGS = ""; }; };
+AD1DF57F980B4220A6501EF0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstream.c */ = {isa = PBXBuildFile; fileRef = 32C8E7C772E947688D0B6128 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstream.c */; settings = { COMPILER_FLAGS = ""; }; };
+1442FE36F8274D1EB1CCA425 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstroke.c */ = {isa = PBXBuildFile; fileRef = 3997900010B64D2DBE931EF3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstroke.c */; settings = { COMPILER_FLAGS = ""; }; };
+01150BFFDEA6431D99CD756A /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsynth.c */ = {isa = PBXBuildFile; fileRef = 14018ED0314E4C5CA0807484 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsynth.c */; settings = { COMPILER_FLAGS = ""; }; };
+15CAAB9624174DCBB39B0928 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsystem.c */ = {isa = PBXBuildFile; fileRef = 5044FCB008C140D6B63FA09F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsystem.c */; settings = { COMPILER_FLAGS = ""; }; };
+D9B2168A0BA94635A3C6A040 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttrigon.c */ = {isa = PBXBuildFile; fileRef = 28E282B493354D3E8CB837E4 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttrigon.c */; settings = { COMPILER_FLAGS = ""; }; };
+FAA9DB7311A047D097944C71 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttype1.c */ = {isa = PBXBuildFile; fileRef = 3E55C24BC6DA4B29B0EA4A9E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttype1.c */; settings = { COMPILER_FLAGS = ""; }; };
+E1BDB4C26BF54A5199D796BA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftutil.c */ = {isa = PBXBuildFile; fileRef = 22134871E35544819E537BF0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftutil.c */; settings = { COMPILER_FLAGS = ""; }; };
+98D1D8315BB94D6DB9F333CB /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftwinfnt.c */ = {isa = PBXBuildFile; fileRef = 2C19BC603DFF45F9A9B8EB1B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftwinfnt.c */; settings = { COMPILER_FLAGS = ""; }; };
+670660FE0EBC4E3FAB269061 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftxf86.c */ = {isa = PBXBuildFile; fileRef = 97585F0C26704DDDB21B1228 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftxf86.c */; settings = { COMPILER_FLAGS = ""; }; };
+A0A31DFDAEAA4027A027180C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bdf/bdf.c */ = {isa = PBXBuildFile; fileRef = 5F2EC62853E345D09B1796E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bdf/bdf.c */; settings = { COMPILER_FLAGS = ""; }; };
+28033E43F5C746059234C4EA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bzip2/ftbzip2.c */ = {isa = PBXBuildFile; fileRef = B3F008B57E5449E78E1095E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bzip2/ftbzip2.c */; settings = { COMPILER_FLAGS = ""; }; };
+E342317368B54F27BF7BAB22 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cache/ftcache.c */ = {isa = PBXBuildFile; fileRef = FADC86DD98914BE39B90146B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cache/ftcache.c */; settings = { COMPILER_FLAGS = ""; }; };
+6AD055038A484361AC473A04 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cff/cff.c */ = {isa = PBXBuildFile; fileRef = 519C8CA261EA4F87A31D76AC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cff/cff.c */; settings = { COMPILER_FLAGS = ""; }; };
+4B493B9B640946DE99126619 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cid/type1cid.c */ = {isa = PBXBuildFile; fileRef = 3EB9219142D74F1080131379 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cid/type1cid.c */; settings = { COMPILER_FLAGS = ""; }; };
+2AFB9EBCD52E43078C3BED6E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/gzip/ftgzip.c */ = {isa = PBXBuildFile; fileRef = 705C6343DB8845D8B4F8E3EE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/gzip/ftgzip.c */; settings = { COMPILER_FLAGS = ""; }; };
+9453384FC9B84CF89C83CE8E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/lzw/ftlzw.c */ = {isa = PBXBuildFile; fileRef = 6B6F66DB112F40CD9291FC00 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/lzw/ftlzw.c */; settings = { COMPILER_FLAGS = ""; }; };
+39327459FA8E452BB401D281 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pcf/pcf.c */ = {isa = PBXBuildFile; fileRef = 58E5FF9365374173A25C5B9C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pcf/pcf.c */; settings = { COMPILER_FLAGS = ""; }; };
+8C73850535F149BC99967232 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pfr/pfr.c */ = {isa = PBXBuildFile; fileRef = 7D7534AAC0F7458F9B2DF1FE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pfr/pfr.c */; settings = { COMPILER_FLAGS = ""; }; };
+ABB452681FF543A99B126355 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux/psaux.c */ = {isa = PBXBuildFile; fileRef = 6EB5AFCF32D84BA5AB4FD3A9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux/psaux.c */; settings = { COMPILER_FLAGS = ""; }; };
+823FFD4B637C46CA8EA12600 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pshinter/pshinter.c */ = {isa = PBXBuildFile; fileRef = 50915F326BED4E18BDB4BFA1 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pshinter/pshinter.c */; settings = { COMPILER_FLAGS = ""; }; };
+3C6B8C372A304B6685062BD3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames/psmodule.c */ = {isa = PBXBuildFile; fileRef = 57921F9B53864CD28660E5FF /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames/psmodule.c */; settings = { COMPILER_FLAGS = ""; }; };
+F853C36A7BAE493AA8135B83 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster/raster.c */ = {isa = PBXBuildFile; fileRef = 8ADFEE33CFAB4A25A665E733 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster/raster.c */; settings = { COMPILER_FLAGS = ""; }; };
+19C2380FCE8B443A9271D74F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt/sfnt.c */ = {isa = PBXBuildFile; fileRef = 3BE3DDF476C84933894E5675 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt/sfnt.c */; settings = { COMPILER_FLAGS = ""; }; };
+49D713CBE34E42E18D5C2C39 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth/smooth.c */ = {isa = PBXBuildFile; fileRef = 3D3E6C084F1942DC8C2C86EC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth/smooth.c */; settings = { COMPILER_FLAGS = ""; }; };
+0CA08D26F1164CD0923DD182 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype/truetype.c */ = {isa = PBXBuildFile; fileRef = DB77BB00BB8247B2AAB79E6B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype/truetype.c */; settings = { COMPILER_FLAGS = ""; }; };
+F64901C0685A4A96B34EAC7B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type1/type1.c */ = {isa = PBXBuildFile; fileRef = C8A5F5E54460403C9F143674 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type1/type1.c */; settings = { COMPILER_FLAGS = ""; }; };
+00E513EF47784DF89E12B863 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type42/type42.c */ = {isa = PBXBuildFile; fileRef = BFCDB843D6144EED9275DC45 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type42/type42.c */; settings = { COMPILER_FLAGS = ""; }; };
+A3655219CC334F02AC372BAC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/winfonts/winfnt.c */ = {isa = PBXBuildFile; fileRef = 8177B31BBBC944EC99169A5C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/winfonts/winfnt.c */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              EBC3F482B4C043C697DB4337 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              5C5056E4A8D540E5840B879E /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              8B9173743BF9477AB53C9A41 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              6856BDFF504842E590C63FF5 /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              C2CE64C208C443DE8DF35F79 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              9445923EB10142259C6A2CA6 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7A378DB113BD4C72A9BA65CA;
+                     remoteInfo = ZERO_CHECK;
+              };
+              0BAE108C70A5432E847894E8 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = AAFCF365AC274278A22AB38D;
+                     remoteInfo = freetype;
+              };
+              4C324811D3C5484C810D77A6 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7A378DB113BD4C72A9BA65CA;
+                     remoteInfo = ZERO_CHECK;
+              };
+              4E432DA93AE54DC0923812A8 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7A378DB113BD4C72A9BA65CA;
+                     remoteInfo = ZERO_CHECK;
+              };
+              54C13F33E479465C83C285A6 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 9FA3DC42D6A240CFB232C19C;
+                     remoteInfo = ALL_BUILD;
+              };
+              C41E18DA6AD44E6782E554A7 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 2455A7C1A9A344CAB2C976C3 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 9FA3DC42D6A240CFB232C19C;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+18E764E86BAE46EE8F43633C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+F24B0F486DDC4B35AE43C9B3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+4204DE71AB4048929BCD2C56 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+ECD93F15937548A78613BF84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+1302D41FD22C47F6B299580D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit/autofit.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "autofit.c"; path = "src/autofit/autofit.c"; sourceTree = SOURCE_ROOT; };
+69D418863808467E950D7528 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftadvanc.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftadvanc.c"; path = "src/base/ftadvanc.c"; sourceTree = SOURCE_ROOT; };
+3CB7B7A736E34F998A1A8839 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbbox.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftbbox.c"; path = "src/base/ftbbox.c"; sourceTree = SOURCE_ROOT; };
+F0C0859F9C39467AB9A7E621 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbdf.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftbdf.c"; path = "src/base/ftbdf.c"; sourceTree = SOURCE_ROOT; };
+F2FD98CEBD5F4531B3FC39DD /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbitmap.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftbitmap.c"; path = "src/base/ftbitmap.c"; sourceTree = SOURCE_ROOT; };
+A310AB592EFE45C8B8132BDE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcalc.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftcalc.c"; path = "src/base/ftcalc.c"; sourceTree = SOURCE_ROOT; };
+03141095C2824534BED8BC03 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcid.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftcid.c"; path = "src/base/ftcid.c"; sourceTree = SOURCE_ROOT; };
+C76AF2D85C7E4633B89D04E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdbgmem.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftdbgmem.c"; path = "src/base/ftdbgmem.c"; sourceTree = SOURCE_ROOT; };
+1CFF50435FE4422784ECF8E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdebug.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftdebug.c"; path = "src/base/ftdebug.c"; sourceTree = SOURCE_ROOT; };
+BBD02B09F42E441BB571D526 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftfstype.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftfstype.c"; path = "src/base/ftfstype.c"; sourceTree = SOURCE_ROOT; };
+391D7C1708BE4BCF9F4875B0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgasp.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftgasp.c"; path = "src/base/ftgasp.c"; sourceTree = SOURCE_ROOT; };
+34436DE19AF044A8862AEC84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgloadr.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftgloadr.c"; path = "src/base/ftgloadr.c"; sourceTree = SOURCE_ROOT; };
+1A345C48E6FC46B5A41C9C99 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftglyph.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftglyph.c"; path = "src/base/ftglyph.c"; sourceTree = SOURCE_ROOT; };
+90D681A1310B4DD0A19FF113 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgxval.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftgxval.c"; path = "src/base/ftgxval.c"; sourceTree = SOURCE_ROOT; };
+05A71FB008FC43CB88D3633F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftinit.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftinit.c"; path = "src/base/ftinit.c"; sourceTree = SOURCE_ROOT; };
+FC8B34759F8F449DB53F1380 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftlcdfil.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftlcdfil.c"; path = "src/base/ftlcdfil.c"; sourceTree = SOURCE_ROOT; };
+790A524A9B1749DF80290A4D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftmm.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftmm.c"; path = "src/base/ftmm.c"; sourceTree = SOURCE_ROOT; };
+CB939796EBD14159AD5706B6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftobjs.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftobjs.c"; path = "src/base/ftobjs.c"; sourceTree = SOURCE_ROOT; };
+58CE267DB4FB4F66951CED32 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftotval.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftotval.c"; path = "src/base/ftotval.c"; sourceTree = SOURCE_ROOT; };
+ED4AD8FD48CE4B58A07835F2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftoutln.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftoutln.c"; path = "src/base/ftoutln.c"; sourceTree = SOURCE_ROOT; };
+6303897A6F7346CEA9DFBA18 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpatent.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftpatent.c"; path = "src/base/ftpatent.c"; sourceTree = SOURCE_ROOT; };
+8E500A402FFC4311914A38A6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpfr.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftpfr.c"; path = "src/base/ftpfr.c"; sourceTree = SOURCE_ROOT; };
+B9836BF0771A43EEB754018B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftrfork.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftrfork.c"; path = "src/base/ftrfork.c"; sourceTree = SOURCE_ROOT; };
+3615FF3FDCE4420493E1D9C9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsnames.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftsnames.c"; path = "src/base/ftsnames.c"; sourceTree = SOURCE_ROOT; };
+32C8E7C772E947688D0B6128 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstream.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftstream.c"; path = "src/base/ftstream.c"; sourceTree = SOURCE_ROOT; };
+3997900010B64D2DBE931EF3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstroke.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftstroke.c"; path = "src/base/ftstroke.c"; sourceTree = SOURCE_ROOT; };
+14018ED0314E4C5CA0807484 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsynth.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftsynth.c"; path = "src/base/ftsynth.c"; sourceTree = SOURCE_ROOT; };
+5044FCB008C140D6B63FA09F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsystem.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftsystem.c"; path = "src/base/ftsystem.c"; sourceTree = SOURCE_ROOT; };
+28E282B493354D3E8CB837E4 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttrigon.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "fttrigon.c"; path = "src/base/fttrigon.c"; sourceTree = SOURCE_ROOT; };
+3E55C24BC6DA4B29B0EA4A9E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttype1.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "fttype1.c"; path = "src/base/fttype1.c"; sourceTree = SOURCE_ROOT; };
+22134871E35544819E537BF0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftutil.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftutil.c"; path = "src/base/ftutil.c"; sourceTree = SOURCE_ROOT; };
+2C19BC603DFF45F9A9B8EB1B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftwinfnt.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftwinfnt.c"; path = "src/base/ftwinfnt.c"; sourceTree = SOURCE_ROOT; };
+97585F0C26704DDDB21B1228 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftxf86.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftxf86.c"; path = "src/base/ftxf86.c"; sourceTree = SOURCE_ROOT; };
+5F2EC62853E345D09B1796E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bdf/bdf.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "bdf.c"; path = "src/bdf/bdf.c"; sourceTree = SOURCE_ROOT; };
+B3F008B57E5449E78E1095E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bzip2/ftbzip2.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftbzip2.c"; path = "src/bzip2/ftbzip2.c"; sourceTree = SOURCE_ROOT; };
+FADC86DD98914BE39B90146B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cache/ftcache.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftcache.c"; path = "src/cache/ftcache.c"; sourceTree = SOURCE_ROOT; };
+519C8CA261EA4F87A31D76AC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cff/cff.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "cff.c"; path = "src/cff/cff.c"; sourceTree = SOURCE_ROOT; };
+3EB9219142D74F1080131379 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cid/type1cid.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "type1cid.c"; path = "src/cid/type1cid.c"; sourceTree = SOURCE_ROOT; };
+705C6343DB8845D8B4F8E3EE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/gzip/ftgzip.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftgzip.c"; path = "src/gzip/ftgzip.c"; sourceTree = SOURCE_ROOT; };
+6B6F66DB112F40CD9291FC00 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/lzw/ftlzw.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "ftlzw.c"; path = "src/lzw/ftlzw.c"; sourceTree = SOURCE_ROOT; };
+58E5FF9365374173A25C5B9C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pcf/pcf.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pcf.c"; path = "src/pcf/pcf.c"; sourceTree = SOURCE_ROOT; };
+7D7534AAC0F7458F9B2DF1FE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pfr/pfr.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pfr.c"; path = "src/pfr/pfr.c"; sourceTree = SOURCE_ROOT; };
+6EB5AFCF32D84BA5AB4FD3A9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux/psaux.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "psaux.c"; path = "src/psaux/psaux.c"; sourceTree = SOURCE_ROOT; };
+50915F326BED4E18BDB4BFA1 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pshinter/pshinter.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "pshinter.c"; path = "src/pshinter/pshinter.c"; sourceTree = SOURCE_ROOT; };
+57921F9B53864CD28660E5FF /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames/psmodule.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "psmodule.c"; path = "src/psnames/psmodule.c"; sourceTree = SOURCE_ROOT; };
+8ADFEE33CFAB4A25A665E733 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster/raster.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "raster.c"; path = "src/raster/raster.c"; sourceTree = SOURCE_ROOT; };
+3BE3DDF476C84933894E5675 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt/sfnt.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "sfnt.c"; path = "src/sfnt/sfnt.c"; sourceTree = SOURCE_ROOT; };
+3D3E6C084F1942DC8C2C86EC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth/smooth.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "smooth.c"; path = "src/smooth/smooth.c"; sourceTree = SOURCE_ROOT; };
+DB77BB00BB8247B2AAB79E6B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype/truetype.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "truetype.c"; path = "src/truetype/truetype.c"; sourceTree = SOURCE_ROOT; };
+C8A5F5E54460403C9F143674 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type1/type1.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "type1.c"; path = "src/type1/type1.c"; sourceTree = SOURCE_ROOT; };
+BFCDB843D6144EED9275DC45 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type42/type42.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "type42.c"; path = "src/type42/type42.c"; sourceTree = SOURCE_ROOT; };
+8177B31BBBC944EC99169A5C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/winfonts/winfnt.c */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.c"; fileEncoding = 4; name = "winfnt.c"; path = "src/winfonts/winfnt.c"; sourceTree = SOURCE_ROOT; };
+ECB7C4F7B0224144A7D0D217 /* freetype */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libfreetype.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              BAEF382F807B44319EF112A0  = {
+                     isa = PBXGroup;
+                     children = (
+                            88A4E701BA264714BC63E250 /* Sources */,
+                            DB22B3F0A08047259D9C9C5A /* Resources */,
+                            90E0E0A4B19E4D619E8952A7 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              88A4E701BA264714BC63E250 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            ACB07D1CEEB643F7B07CCCB5 /* ALL_BUILD */,
+                            0B3563D3CD6842BDA06E557C /* ZERO_CHECK */,
+                            5CD0394A82EA4D9CBC0E7181 /* dist */,
+                            0E9FB0D00CFB42A9A4F0148E /* freetype */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              DB22B3F0A08047259D9C9C5A /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              ACB07D1CEEB643F7B07CCCB5 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AF4627E79D1B40BB89A588CC /* CMake Rules */,
+                            18E764E86BAE46EE8F43633C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              AF4627E79D1B40BB89A588CC /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              0B3563D3CD6842BDA06E557C /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C11893A04C0D44E3AED2069F /* CMake Rules */,
+                            F24B0F486DDC4B35AE43C9B3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              C11893A04C0D44E3AED2069F /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              5CD0394A82EA4D9CBC0E7181 /* dist */ = {
+                     isa = PBXGroup;
+                     children = (
+                            A2DCE3C564E84F868A98C782 /* CMake Rules */,
+                            4204DE71AB4048929BCD2C56 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */,
+                     );
+                     name = dist;
+                     sourceTree = "<group>";
+              };
+              A2DCE3C564E84F868A98C782 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              0E9FB0D00CFB42A9A4F0148E /* freetype */ = {
+                     isa = PBXGroup;
+                     children = (
+                            51CC2B032C7A4DBDAE9475D0 /* Source Files */,
+                            ECD93F15937548A78613BF84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/CMakeLists.txt */,
+                     );
+                     name = freetype;
+                     sourceTree = "<group>";
+              };
+              51CC2B032C7A4DBDAE9475D0 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            1302D41FD22C47F6B299580D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit/autofit.c */,
+                            69D418863808467E950D7528 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftadvanc.c */,
+                            3CB7B7A736E34F998A1A8839 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbbox.c */,
+                            F0C0859F9C39467AB9A7E621 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbdf.c */,
+                            F2FD98CEBD5F4531B3FC39DD /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbitmap.c */,
+                            A310AB592EFE45C8B8132BDE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcalc.c */,
+                            03141095C2824534BED8BC03 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcid.c */,
+                            C76AF2D85C7E4633B89D04E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdbgmem.c */,
+                            1CFF50435FE4422784ECF8E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdebug.c */,
+                            BBD02B09F42E441BB571D526 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftfstype.c */,
+                            391D7C1708BE4BCF9F4875B0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgasp.c */,
+                            34436DE19AF044A8862AEC84 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgloadr.c */,
+                            1A345C48E6FC46B5A41C9C99 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftglyph.c */,
+                            90D681A1310B4DD0A19FF113 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgxval.c */,
+                            05A71FB008FC43CB88D3633F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftinit.c */,
+                            FC8B34759F8F449DB53F1380 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftlcdfil.c */,
+                            790A524A9B1749DF80290A4D /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftmm.c */,
+                            CB939796EBD14159AD5706B6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftobjs.c */,
+                            58CE267DB4FB4F66951CED32 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftotval.c */,
+                            ED4AD8FD48CE4B58A07835F2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftoutln.c */,
+                            6303897A6F7346CEA9DFBA18 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpatent.c */,
+                            8E500A402FFC4311914A38A6 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpfr.c */,
+                            B9836BF0771A43EEB754018B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftrfork.c */,
+                            3615FF3FDCE4420493E1D9C9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsnames.c */,
+                            32C8E7C772E947688D0B6128 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstream.c */,
+                            3997900010B64D2DBE931EF3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstroke.c */,
+                            14018ED0314E4C5CA0807484 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsynth.c */,
+                            5044FCB008C140D6B63FA09F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsystem.c */,
+                            28E282B493354D3E8CB837E4 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttrigon.c */,
+                            3E55C24BC6DA4B29B0EA4A9E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttype1.c */,
+                            22134871E35544819E537BF0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftutil.c */,
+                            2C19BC603DFF45F9A9B8EB1B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftwinfnt.c */,
+                            97585F0C26704DDDB21B1228 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftxf86.c */,
+                            5F2EC62853E345D09B1796E3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bdf/bdf.c */,
+                            B3F008B57E5449E78E1095E2 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bzip2/ftbzip2.c */,
+                            FADC86DD98914BE39B90146B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cache/ftcache.c */,
+                            519C8CA261EA4F87A31D76AC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cff/cff.c */,
+                            3EB9219142D74F1080131379 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cid/type1cid.c */,
+                            705C6343DB8845D8B4F8E3EE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/gzip/ftgzip.c */,
+                            6B6F66DB112F40CD9291FC00 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/lzw/ftlzw.c */,
+                            58E5FF9365374173A25C5B9C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pcf/pcf.c */,
+                            7D7534AAC0F7458F9B2DF1FE /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pfr/pfr.c */,
+                            6EB5AFCF32D84BA5AB4FD3A9 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux/psaux.c */,
+                            50915F326BED4E18BDB4BFA1 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pshinter/pshinter.c */,
+                            57921F9B53864CD28660E5FF /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames/psmodule.c */,
+                            8ADFEE33CFAB4A25A665E733 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster/raster.c */,
+                            3BE3DDF476C84933894E5675 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt/sfnt.c */,
+                            3D3E6C084F1942DC8C2C86EC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth/smooth.c */,
+                            DB77BB00BB8247B2AAB79E6B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype/truetype.c */,
+                            C8A5F5E54460403C9F143674 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type1/type1.c */,
+                            BFCDB843D6144EED9275DC45 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type42/type42.c */,
+                            8177B31BBBC944EC99169A5C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/winfonts/winfnt.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              90E0E0A4B19E4D619E8952A7 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            ECB7C4F7B0224144A7D0D217 /* freetype */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              AAFCF365AC274278A22AB38D /* freetype */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 2775C9A1BBD54C399DD8F200 /* Build configuration list for PBXNativeTarget "freetype" */;
+                     buildPhases = (
+                            539379BCEE6148A6BBBE02DA /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            5F86239974574C25BAFFAA5B /* PBXTargetDependency */,
+                     );
+                     name = freetype;
+                     productName = freetype;
+                     productReference = ECB7C4F7B0224144A7D0D217 /* freetype */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              2455A7C1A9A344CAB2C976C3 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 10CB34BA714B49E8829DB0ED /* Build configuration list for PBXProject  "freetype" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            5C5056E4A8D540E5840B879E /* Debug */,
+                            8B9173743BF9477AB53C9A41 /* Release */,
+                            6856BDFF504842E590C63FF5 /* MinSizeRel */,
+                            C2CE64C208C443DE8DF35F79 /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = BAEF382F807B44319EF112A0;
+                     projectDirPath = "..";
+                     projectRoot = "";
+                     targets = (
+                            9FA3DC42D6A240CFB232C19C /* ALL_BUILD */,
+                            7A378DB113BD4C72A9BA65CA /* ZERO_CHECK */,
+                            3BE611CA69F54884A9A51DD6 /* dist */,
+                            AAFCF365AC274278A22AB38D /* freetype */,
+                            A2DBA0F495A14D5587E7954C /* install */,
+                            89CCECCE9F0B45D0931B9A11 /* package */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              04121F1DE28E45A6900D9D1E /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              F36E036D2CFC4603A0DA0688 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include -f /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              5FF5374DD61A45B282BCFC71 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              E4BFCF98167D461682BE18A4 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include -f /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              700219751AB44075990D9D73 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              A6B288C78BE34348B2E8CDA3 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include -f /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/CMakeScripts/dist_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              CA45D58074534FDA80F64BE3 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              76810927CCD448A68BE817F4 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include -f /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              435511EC150247B59611D2DC /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              9B76DEE1702C46059FC6E8B7 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include -f /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              539379BCEE6148A6BBBE02DA /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            7F8CB70A73AA48A0AD9BFF6B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit/autofit.c */,
+                            EA55B741A4214073B1DD2F68 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftadvanc.c */,
+                            5DA56A3DABA149D7B8323131 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbbox.c */,
+                            E49028FC3F3547A58F7955B3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbdf.c */,
+                            FBAD4511D9E146E78AA9971C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftbitmap.c */,
+                            A815588BCC1B416EA0A52BFA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcalc.c */,
+                            C2907C7D1A5B4174B5A7DEA8 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftcid.c */,
+                            9F64E20032F14B679B740D41 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdbgmem.c */,
+                            9AD5EF826568460C9BB4452C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftdebug.c */,
+                            72760F1D78FF419CBAD5784C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftfstype.c */,
+                            8D40BB7F688144ADA8DC0D88 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgasp.c */,
+                            738CA2A865AD4A5289549284 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgloadr.c */,
+                            4E95897D69BD46FCAF4997FA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftglyph.c */,
+                            35355649F4E547C6802F6687 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftgxval.c */,
+                            688F0F14B8804BBDA44C1E60 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftinit.c */,
+                            02A7C24598A64F6487107CB7 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftlcdfil.c */,
+                            BDDD267C9C3447B6A975035C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftmm.c */,
+                            E60A8C95C4314C89B9E15107 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftobjs.c */,
+                            8E75F5FC8A524BC0A098FE00 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftotval.c */,
+                            4DF7240B7D4A4CAF856E2C2C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftoutln.c */,
+                            AA673C80EFF14E11B08833C3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpatent.c */,
+                            8FD4E2B8889E464A9876050B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftpfr.c */,
+                            EE5B107586E4478CBB5F7620 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftrfork.c */,
+                            2078158EFD814134A95F085B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsnames.c */,
+                            AD1DF57F980B4220A6501EF0 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstream.c */,
+                            1442FE36F8274D1EB1CCA425 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftstroke.c */,
+                            01150BFFDEA6431D99CD756A /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsynth.c */,
+                            15CAAB9624174DCBB39B0928 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftsystem.c */,
+                            D9B2168A0BA94635A3C6A040 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttrigon.c */,
+                            FAA9DB7311A047D097944C71 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/fttype1.c */,
+                            E1BDB4C26BF54A5199D796BA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftutil.c */,
+                            98D1D8315BB94D6DB9F333CB /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftwinfnt.c */,
+                            670660FE0EBC4E3FAB269061 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/base/ftxf86.c */,
+                            A0A31DFDAEAA4027A027180C /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bdf/bdf.c */,
+                            28033E43F5C746059234C4EA /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/bzip2/ftbzip2.c */,
+                            E342317368B54F27BF7BAB22 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cache/ftcache.c */,
+                            6AD055038A484361AC473A04 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cff/cff.c */,
+                            4B493B9B640946DE99126619 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/cid/type1cid.c */,
+                            2AFB9EBCD52E43078C3BED6E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/gzip/ftgzip.c */,
+                            9453384FC9B84CF89C83CE8E /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/lzw/ftlzw.c */,
+                            39327459FA8E452BB401D281 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pcf/pcf.c */,
+                            8C73850535F149BC99967232 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pfr/pfr.c */,
+                            ABB452681FF543A99B126355 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux/psaux.c */,
+                            823FFD4B637C46CA8EA12600 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/pshinter/pshinter.c */,
+                            3C6B8C372A304B6685062BD3 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames/psmodule.c */,
+                            F853C36A7BAE493AA8135B83 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster/raster.c */,
+                            19C2380FCE8B443A9271D74F /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt/sfnt.c */,
+                            49D713CBE34E42E18D5C2C39 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth/smooth.c */,
+                            0CA08D26F1164CD0923DD182 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype/truetype.c */,
+                            F64901C0685A4A96B34EAC7B /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type1/type1.c */,
+                            00E513EF47784DF89E12B863 /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/type42/type42.c */,
+                            A3655219CC334F02AC372BAC /* /Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/winfonts/winfnt.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              D67700CE80AD48DE831E7462 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7A378DB113BD4C72A9BA65CA /* ZERO_CHECK */;
+                     targetProxy = 9445923EB10142259C6A2CA6 /* PBXContainerItemProxy */;
+              };
+              1F6B5411111E4F9E9B93437D /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = AAFCF365AC274278A22AB38D /* freetype */;
+                     targetProxy = 0BAE108C70A5432E847894E8 /* PBXContainerItemProxy */;
+              };
+              F755A7B51FCC401FBA0CF082 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7A378DB113BD4C72A9BA65CA /* ZERO_CHECK */;
+                     targetProxy = 4C324811D3C5484C810D77A6 /* PBXContainerItemProxy */;
+              };
+              5F86239974574C25BAFFAA5B /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7A378DB113BD4C72A9BA65CA /* ZERO_CHECK */;
+                     targetProxy = 4E432DA93AE54DC0923812A8 /* PBXContainerItemProxy */;
+              };
+              2EC6EF7FBD1A4FC3B5FADB83 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 9FA3DC42D6A240CFB232C19C /* ALL_BUILD */;
+                     targetProxy = 54C13F33E479465C83C285A6 /* PBXContainerItemProxy */;
+              };
+              EA70E647EA724EF0AD70CF7A /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 9FA3DC42D6A240CFB232C19C /* ALL_BUILD */;
+                     targetProxy = C41E18DA6AD44E6782E554A7 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              24CBB9FFFCD845E49D61C80F /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/build";
+                     };
+                     name = Debug;
+              };
+              EBFD78DF56934492A3EAEC67 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/build";
+                     };
+                     name = Release;
+              };
+              E23C09B5356D400EBA25779C /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/build";
+                     };
+                     name = MinSizeRel;
+              };
+              60212AFF4EDC4A6D896045DD /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/build";
+                     };
+                     name = RelWithDebInfo;
+              };
+              DD269EF2E64C4AD581325C50 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              EF6DF8C3A5C64A009CC61D7C /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              52830E7FD134470A88EDE53D /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              07D0EBE221214F1496AE84A9 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              BBD892EB33A149D2AF3F34E0 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              467B6CF5D3D4422B859D84D5 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              8CFFBE96860B4C558E92B13E /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              8C7F337C6BFB429D97690120 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              81B19CD2B1A6409E9EF1D558 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              763AECA45DDA41C1A663CD24 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              B8A3442674AC4F0DB7C4E8C9 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              44EABA1569E4482488D1EB84 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = dist;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              C96EF3D49CC04BA79C2CA653 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = freetype;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              2EED9CB074684A8586ADB607 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = freetype;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              BFB0A1F5B5F44870BD1B03AC /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = freetype;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              6BA3D40D33C24D41B7F446A1 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", FT2_BUILD_LIBRARY, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "       -DNDEBUG  ";
+                            OTHER_LIBTOOLFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = freetype;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              BAD5B8A07B6A4241B8183FB6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              7B6826935EE344C7A8FE1C52 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              96A955F329124F6892B85388 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              D74378D068A5478E8C3049DB /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              207425538A774657A5D07262 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              C996769C239245449DF5342A /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              2B511ED95F4343B3A08AF190 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              BB5ADE17A0A24EE688162692 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include/include/freetype2", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/truetype", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/sfnt", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/autofit", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/smooth", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/raster", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psaux", "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/src/psnames", );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = package;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/dovgalkostiantyn/projects/spark-opengles/external/freetype/include";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              10CB34BA714B49E8829DB0ED /* Build configuration list for PBXProject  "freetype" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            24CBB9FFFCD845E49D61C80F /* Debug */,
+                            EBFD78DF56934492A3EAEC67 /* Release */,
+                            E23C09B5356D400EBA25779C /* MinSizeRel */,
+                            60212AFF4EDC4A6D896045DD /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              A5B15607347645FC82B4B6C6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            DD269EF2E64C4AD581325C50 /* Debug */,
+                            EF6DF8C3A5C64A009CC61D7C /* Release */,
+                            52830E7FD134470A88EDE53D /* MinSizeRel */,
+                            07D0EBE221214F1496AE84A9 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              CB940FA4C29C4A7C89B2185E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            BBD892EB33A149D2AF3F34E0 /* Debug */,
+                            467B6CF5D3D4422B859D84D5 /* Release */,
+                            8CFFBE96860B4C558E92B13E /* MinSizeRel */,
+                            8C7F337C6BFB429D97690120 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              5C34C768F6094E0191B1FB0D /* Build configuration list for PBXAggregateTarget "dist" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            81B19CD2B1A6409E9EF1D558 /* Debug */,
+                            763AECA45DDA41C1A663CD24 /* Release */,
+                            B8A3442674AC4F0DB7C4E8C9 /* MinSizeRel */,
+                            44EABA1569E4482488D1EB84 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              2775C9A1BBD54C399DD8F200 /* Build configuration list for PBXNativeTarget "freetype" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            C96EF3D49CC04BA79C2CA653 /* Debug */,
+                            2EED9CB074684A8586ADB607 /* Release */,
+                            BFB0A1F5B5F44870BD1B03AC /* MinSizeRel */,
+                            6BA3D40D33C24D41B7F446A1 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              27C049027F384E83A76F0222 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            BAD5B8A07B6A4241B8183FB6 /* Debug */,
+                            7B6826935EE344C7A8FE1C52 /* Release */,
+                            96A955F329124F6892B85388 /* MinSizeRel */,
+                            D74378D068A5478E8C3049DB /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              9418784EDF004DDE93BE2825 /* Build configuration list for PBXAggregateTarget "package" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            207425538A774657A5D07262 /* Debug */,
+                            C996769C239245449DF5342A /* Release */,
+                            2B511ED95F4343B3A08AF190 /* MinSizeRel */,
+                            BB5ADE17A0A24EE688162692 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 2455A7C1A9A344CAB2C976C3;
+}

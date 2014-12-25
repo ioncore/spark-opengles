@@ -10,7 +10,7 @@
 #define _TEXTURE_H_
 
 class CImage;
-
+#include "stable.pch"
 //
 class CTexture {
 public:

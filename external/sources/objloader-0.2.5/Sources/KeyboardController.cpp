@@ -13,7 +13,7 @@
 #include "WindowManager.hpp"
 
 //
-void CKeyboardController::keyDown(SDLKey key) const
+void CKeyboardController::keyDown(SDL_Keycode key) const
 {
 	if (SDLK_RETURN == key)
 		CMeshViewer::getInstance().resetScene();
@@ -27,21 +27,21 @@ void CKeyboardController::keyDown(SDLKey key) const
 //
 bool CKeyboardController::getCtrlState()
 {
-	Uint8* pKeyStates = SDL_GetKeyState(NULL);
+	const Uint8* pKeyStates = SDL_GetKeyboardState(NULL);
 	bool bRet = (pKeyStates[SDLK_LCTRL] != 0) || (pKeyStates[SDLK_RCTRL] != 0);
 	return bRet;
 }
 //
 bool CKeyboardController::getAltState()
 {
-	Uint8* pKeyStates = SDL_GetKeyState(NULL);
+	const Uint8* pKeyStates = SDL_GetKeyboardState(NULL);
 	bool bRet = (pKeyStates[SDLK_LALT] != 0) || (pKeyStates[SDLK_RALT] != 0);
 	return bRet;
 }
 //
 bool CKeyboardController::getShiftState()
 {
-	Uint8* pKeyStates = SDL_GetKeyState(NULL);
+	const Uint8* pKeyStates = SDL_GetKeyboardState(NULL);
 	bool bRet = (pKeyStates[SDLK_LSHIFT] != 0) || (pKeyStates[SDLK_RSHIFT] != 0);
 	return bRet;
 }

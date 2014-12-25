@@ -4,8 +4,8 @@ cmake_policy(SET CMP0020 OLD)
 project(SPARK_LIB)
 set(SPARK_LIB_NAME ${PROJECT_NAME})
 
-find_package(OpenGL REQUIRED)
-find_package(FreeType REQUIRED)
+find_package(OpenGLES REQUIRED)
+#find_package(FreeType REQUIRED)
 
 message("message OpenGL include dir: ${OpenGL_INCLUDE_DIR}")
 message("message FREETYPE_INCLUDE_DIR: ${FREETYPE_INCLUDE_DIR}")
@@ -16,6 +16,9 @@ include_directories(
     ${OpenGL_INCLUDE_DIR}
     #/usr/local/include/
     ${FREETYPE_INCLUDE_DIR}
+    OpenGLES/
+#    /Users/dovgalkostiantyn/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/
+#    /Users/dovgalkostiantyn/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/
 )
 
 file(

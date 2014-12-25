@@ -12,6 +12,7 @@
 #define __EXCEPTION_H__
 
 #include <exception>
+#include "stable.pch"
 
 
 //	Root exception for the project

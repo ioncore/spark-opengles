@@ -24,6 +24,7 @@
 #include <fstream>
 #include <istream>
 #include <new>
+#include <memory>
 
 using std::istream;
 using std::ostream;
@@ -42,24 +43,26 @@ using std::fill;
 //////////////////////
 //  API headers
 
-#include "OpenGL/glu.h"	// Mac OS X OpenGL header location
+//#include "OpenGL/glu.h"	// Mac OS X OpenGL header location
+#include <OpenGlES/ES2/gl.h>
 //#include "GL/glu.h"	// Other platforms OpenGL header location
-#include "SDL.h"
+#include <SDL.h>
 
 
 //////////////////////////////////////////////////////
 //  Boost headers (cf. http://www.boost.org)
 
-#include <boost/config.hpp>
-#include <boost/shared_ptr.hpp>
-using boost::shared_ptr;
-#include "boost/filesystem/operations.hpp" // includes boost/filesystem/path.hpp
-#include "boost/filesystem/fstream.hpp"    // ditto
-using boost::filesystem::path;
-#include <boost/spirit/core.hpp>
-#include <boost/spirit/utility/confix.hpp>
-#include <boost/spirit/iterator/file_iterator.hpp>
-#include <boost/spirit/symbols/symbols.hpp>
+//#include <boost/config.hpp>
+//#include <boost/shared_ptr.hpp>
+//using boost::shared_ptr;
+using std::shared_ptr;
+//#include "boost/filesystem/operations.hpp" // includes boost/filesystem/path.hpp
+//#include "boost/filesystem/fstream.hpp"    // ditto
+//using boost::filesystem::path;
+//#include <boost/spirit/core.hpp>
+//#include <boost/spirit/utility/confix.hpp>
+//#include <boost/spirit/iterator/file_iterator.hpp>
+//#include <boost/spirit/symbols/symbols.hpp>
 
 
 

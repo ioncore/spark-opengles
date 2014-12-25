@@ -9,6 +9,7 @@
 #ifndef __IMAGE_HPP__
 #define __IMAGE_HPP__
 
+#include "stable.pch"
 
 //	C++ wrapper class for SDL C data.
 //  Don't use CImages directly, use CTextures instead (welcome to the 3rd dimension).

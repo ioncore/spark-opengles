@@ -11,7 +11,7 @@
 
 class CMesh;
 
-
+#include "stable.pch"
 //
 class CSceneObject {
 public:
@@ -25,7 +25,7 @@ public:
 	{}
 	//	compiler generated copy ctor, dtor, and copy assignment apply.
 
-	void setMesh(const shared_ptr<CMesh>& pMesh);
+  void setMesh(const std::shared_ptr<CMesh>& pMesh);
 	void animate(const float dt);
 	void draw() const;
 		//	must be const
@@ -43,7 +43,7 @@ public:
 	float m_rotationZ;
 
 private:
-	shared_ptr<CMesh> m_pMesh;
+  std::shared_ptr<CMesh> m_pMesh;
 		//	the mesh data is always shared, not copied.
 };
 

@@ -10,6 +10,7 @@
 #ifndef __VERTEX_H__
 #define __VERTEX_H__
 
+#include "stable.pch"
 
 // Vertex est minimal, car on est ammenŽé àˆ en stocker un grand nombre.
 struct SVertex {

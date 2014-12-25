@@ -14,7 +14,7 @@
 
 class CMesh;
 struct SMaterial;
-
+#include "stable.pch"
 
 //////////////////////
 //	".obj" file parser

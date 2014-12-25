@@ -21,7 +21,8 @@ IF (WIN32)
 	IF(0) # Disabled, untill further testing
 	  IF (CYGWIN)
 
-		FIND_PATH(OPENGLES_INCLUDE_DIR GLES/gl.h )
+		#FIND_PATH(OPENGLES_INCLUDE_DIR GLES/gl.h )
+		FIND_PATH(OPENGLES_INCLUDE_DIR ES2/gl.h )
 
 		FIND_LIBRARY(OPENGLES_gl_LIBRARY libgles_cm )
 
@@ -50,7 +51,8 @@ ELSE (WIN32)
 	IF(0) # Disabled, untill further testing
 
 
-		FIND_PATH(OPENGLES_INCLUDE_DIR GLES/gl.h
+		#FIND_PATH(OPENGLES_INCLUDE_DIR GLES/gl.h
+		FIND_PATH(OPENGLES_INCLUDE_DIR ES2/gl.h
 		  /usr/openwin/share/include
 		  /opt/graphics/OpenGL/include /usr/X11R6/include
 		  /usr/include

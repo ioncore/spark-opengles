@@ -6,7 +6,7 @@
  *  Copyright 2006 __MyCompanyName__. All rights reserved.
  *
  */
-#include "SDL_image.h"
+#include <SDL_image.h>
 #include "Image.hpp"
 #include "Exception.hpp"
 

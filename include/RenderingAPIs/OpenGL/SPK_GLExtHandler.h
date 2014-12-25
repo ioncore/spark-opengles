@@ -368,7 +368,7 @@ namespace GL
 
 	inline void GLExtHandler::enablePointSpriteGLExt()
 	{
-		glTexEnvf(GL_POINT_SPRITE,GL_COORD_REPLACE,GL_TRUE);
+		//+glTexEnvf(GL_POINT_SPRITE,GL_COORD_REPLACE,GL_TRUE);
 		glEnable(GL_POINT_SPRITE);
 	}
 

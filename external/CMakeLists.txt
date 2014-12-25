@@ -5,6 +5,6 @@ project(THIRD_PARTIES)
 
 find_package(PkgConfig)
 
-#add_subdirectory(SDL2)
+add_subdirectory(SDL2)
 add_subdirectory(freetype)
 

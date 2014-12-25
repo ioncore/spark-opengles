@@ -11,7 +11,7 @@
 #ifndef __MOUSECONTROLLER_H__
 #define __MOUSECONTROLLER_H__
 
-
+#include "stable.pch"
 //	singleton pattern
 class CMouseController {
 public:

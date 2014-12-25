@@ -11,7 +11,7 @@
 #ifndef __WINDOWMANAGER_H__
 #define __WINDOWMANAGER_H__
 
-
+#include "stable.pch"
 //
 class CWindowManager {
 public:

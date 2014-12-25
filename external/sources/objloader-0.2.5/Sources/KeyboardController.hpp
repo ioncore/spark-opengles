@@ -11,6 +11,7 @@
 #ifndef __KEYBOARDCONTROLLER_H__
 #define __KEYBOARDCONTROLLER_H__
 
+#include "stable.pch"
 
 //	singleton pattern
 class CKeyboardController {
@@ -21,7 +22,7 @@ public:
 		return theKeyboardController;
 	}
 
-	void keyDown(SDLKey key) const;
+	void keyDown(SDL_Keycode key) const;
 	bool getCtrlState();
 	bool getAltState();
 	bool getShiftState();
