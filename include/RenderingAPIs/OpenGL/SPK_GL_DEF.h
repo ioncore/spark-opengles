@@ -47,7 +47,12 @@
 #endif
 
 #if defined(__APPLE__)
-#include <ES2/gl.h>
+#include <TargetConditionals.h>
+#if TARGET_OS_MAC
+#include <OpenGL/gl.h>
+#else
+#include <OpenGLES/ES1/gl.h>
+#endif
 #elif defined(macintosh)
 #include <gl.h>
 #else
