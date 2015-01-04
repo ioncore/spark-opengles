@@ -111,7 +111,7 @@ namespace SPK
 		virtual void copyChildren(const Registerable& object,bool createBase);
 		virtual void destroyChildren(bool keepChildren);
 
-	private :
+	//private :
 
 		bool inverted;
 		Zone* normalZone;

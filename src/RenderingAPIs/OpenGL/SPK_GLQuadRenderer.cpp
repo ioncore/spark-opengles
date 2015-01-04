@@ -70,10 +70,23 @@ namespace GL
 
 	void GLQuadRenderer::createBuffers(const Group& group)
 	{
+#if TARGET_OS_IPHONE == 1
+		FloatBuffer* fBuffer = dynamic_cast<FloatBuffer*>(group.createBuffer(GPU_BUFFER_NAME,FloatBufferCreator(42),0,false));
+#else
 		FloatBuffer* fBuffer = dynamic_cast<FloatBuffer*>(group.createBuffer(GPU_BUFFER_NAME,FloatBufferCreator(28),0,false));
+#endif
 		gpuIterator = gpuBuffer = fBuffer->getData();
 		if (texturingMode != TEXTURE_NONE)
 			textureIterator = textureBuffer = createTextureBuffer(group);
+/*
+printf("Create texture coords: \n");
+printf("0 %f - %f\n", textureBuffer[0], textureBuffer[1]);
+printf("1 %f - %f\n", textureBuffer[2], textureBuffer[3]);
+printf("2 %f - %f\n", textureBuffer[4], textureBuffer[5]);
+printf("3 %f - %f\n", textureBuffer[6], textureBuffer[7]);
+printf("4 %f - %f\n", textureBuffer[8], textureBuffer[9]);
+printf("5 %f - %f\n", textureBuffer[10], textureBuffer[11]);
+*/
 	}
 
 	void GLQuadRenderer::destroyBuffers(const Group& group)
@@ -89,6 +102,18 @@ namespace GL
 		switch(texturingMode)
 		{
 		case TEXTURE_2D :
+#if TARGET_OS_IPHONE == 1
+			fbuffer = dynamic_cast<FloatBuffer*>(group.createBuffer(TEXTURE_BUFFER_NAME,FloatBufferCreator(12),TEXTURE_2D,false));
+			if (!group.getModel()->isEnabled(PARAM_TEXTURE_INDEX))
+			{
+				float t[12] = {1.0f,0.0f, 0.0f,0.0f, 0.0f,1.0f, 1.0f,1.0f, 1.0f,0.0f, 0.0f,1.0f};
+				for (size_t i = 0; i < group.getParticles().getNbReserved() * 12; ++i) {
+					fbuffer->getData()[i] = t[i % 12];
+//printf("Assigning %dth element: from %dth element %f\n", i, fbuffer->getData()[i], (i % 12), t[i % 12]);
+                                }
+			}
+			break;
+#else
 			fbuffer = dynamic_cast<FloatBuffer*>(group.createBuffer(TEXTURE_BUFFER_NAME,FloatBufferCreator(8),TEXTURE_2D,false));
 			if (!group.getModel()->isEnabled(PARAM_TEXTURE_INDEX))
 			{
@@ -97,6 +122,7 @@ namespace GL
 					fbuffer->getData()[i] = t[i & 7];
 			}
 			break;
+#endif
 
 		case TEXTURE_3D :
 			fbuffer = dynamic_cast<FloatBuffer*>(group.createBuffer(TEXTURE_BUFFER_NAME,FloatBufferCreator(12),TEXTURE_3D,false));
@@ -150,17 +176,21 @@ namespace GL
 
 			if (!group.getModel()->isEnabled(PARAM_TEXTURE_INDEX))
 			{
-				if (!group.getModel()->isEnabled(PARAM_ANGLE))
+				if (!group.getModel()->isEnabled(PARAM_ANGLE)) {
 					renderParticle = &GLQuadRenderer::render2D;
-				else
+                                }
+				else {
 					renderParticle = &GLQuadRenderer::render2DRot;
+}
 			}
 			else
 			{
-				if (!group.getModel()->isEnabled(PARAM_ANGLE))
+				if (!group.getModel()->isEnabled(PARAM_ANGLE)) {
 					renderParticle = &GLQuadRenderer::render2DAtlas;
-				else
+}
+				else {
 					renderParticle = &GLQuadRenderer::render2DAtlasRot;
+}
 			}
 			break;
 
@@ -227,9 +257,20 @@ namespace GL
 		// interleaves vertex and color data
 		glVertexPointer(3,GL_FLOAT,7 * sizeof(float),gpuBuffer);
 		glColorPointer(4,GL_FLOAT,7 * sizeof(float),gpuBuffer + 3);
-
-		//markupipglDrawArrays(GL_QUADS,0,group.getNbParticles() << 2);
-
+#if TARGET_OS_IPHONE == 1
+		glDrawArrays(GL_TRIANGLES,0,group.getNbParticles() * 2 * 3);
+/*
+printf("Texture coords: \n");
+printf("0 %f - %f\n", textureBuffer[0], textureBuffer[1]);
+printf("1 %f - %f\n", textureBuffer[2], textureBuffer[3]);
+printf("2 %f - %f\n", textureBuffer[4], textureBuffer[5]);
+printf("3 %f - %f\n", textureBuffer[6], textureBuffer[7]);
+printf("4 %f - %f\n", textureBuffer[8], textureBuffer[9]);
+printf("5 %f - %f\n", textureBuffer[10], textureBuffer[11]);
+*/
+#else
+		glDrawArrays(GL_QUADS,0,group.getNbParticles() << 2);
+#endif
 		glDisableClientState(GL_VERTEX_ARRAY);
 		glDisableClientState(GL_COLOR_ARRAY);
 

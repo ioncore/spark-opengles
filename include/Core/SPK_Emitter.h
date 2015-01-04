@@ -107,6 +107,8 @@ namespace SPK
 		*/
 		void changeTank(int deltaTank);
 
+		void forced2D(bool val) {forced2D_ = val;}
+
 		/**
 		* @brief Sets the flow of this Emitter
 		*
@@ -244,6 +246,8 @@ namespace SPK
 		virtual void destroyChildren(bool keepChildren);
 
 		virtual void propagateUpdateTransform();
+
+		bool forced2D_;
 
 	private :
 

@@ -39,6 +39,15 @@ namespace SPK
 
 	void Vortex::modify(Particle& particle,float deltaTime) const
 	{
+		if (forced2D_)
+		{
+			if (!particle.isInitRPosition_){
+				particle.rposition() = particle.position();//save first position to reserve
+				particle.isInitRPosition_ = true;
+			}
+			particle.position() = particle.rposition();
+		}
+
 		// Distance of the projection point from the position of the vortex
 		float dist = dotProduct(tDirection,particle.position() - tPosition);
 		
@@ -72,6 +81,18 @@ namespace SPK
 		}
 
         particle.position() = rotationCenter + normal * endRadius * std::cos(angle) + tangent * endRadius * std::sin(angle);
+		//particle.position().z = 0;
+		//printf("=====\nxyz = %f %f %f\n",particle.position().x, particle.position().y, particle.position().z);
+
+		if (forced2D_)
+		{
+			particle.rposition() = particle.position();
+
+			//printf("\nreal xyz = %f %f %f\n",particle.position().x, particle.position().y, particle.position().z);
+			particle.position().z = 0;
+			//printf("forced xyz = %f %f %f",particle.position().x, particle.position().y, particle.position().z);
+
+		}
 	}
 
 	void Vortex::innerUpdateTransform()

@@ -73,7 +73,7 @@ namespace SPK
 	* Note that buffers are linked to a class of renderer, not to a given renderer object.<br>
 	* Moreover buffers have an inner flag that can vary function of the states of the renderer used.
 	*/
-	class SPK_PREFIX Renderer : public Registerable,
+	class SPK_PREFIX Renderer : virtual public Registerable,
 								public BufferHandler
 	{
 	public :

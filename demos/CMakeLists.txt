@@ -25,8 +25,11 @@ include_directories(
     ${OPENGL_INCLUDE_DIR}
     ${OPENGLES_INCLUDE_DIR}
     #${SDL2_INCLUDE_DIR}
-    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/OpenGLES.framework/Headers
-    /Users/dovgalkostiantyn/Downloads/SDL2-2.0.3/include
+    #/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/OpenGLES.framework/Headers
+    #/Users/dovgalkostiantyn/Downloads/SDL2-2.0.3/include
+    ${CMAKE_SOURCE_DIR}/../ftgles/ftgles/src
+    ${CMAKE_SOURCE_DIR}/../freetype2-ios/include
+    ${CMAKE_SOURCE_DIR}/external/SDL2/build/ios/include
     #${SDL2_INCLUDE_DIR}
     #${FTGL_INCLUDE_DIR}
     #${FREETYPE_INCLUDE_DIR}

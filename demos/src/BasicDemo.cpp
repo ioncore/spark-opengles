@@ -29,15 +29,24 @@
 #if defined(WIN32) || defined(_WIN32)
 #include <windows.h>
 #endif
-//#include <OpenGL/gl.h>
-//#include <OpenGL/glu.h>
 
-#include <ES3/gl.h>
-#include <ES3/gl.h>
+#ifdef __APLE__
+#  include <TargetConditionals.h>
+#  if TARGET_IPHONE_SIMULATOR == 1
+#    include <OpenGLES/ES1/gl.h>
+#    include <FTGL/ftgles.h>
+#  elif TARGET_OS_IPHONE == 1
+#    include <OpenGLES/ES1/gl.h>
+#    include <FTGL/ftgles.h>
+#  elif TARGET_OS_MAC == 1
+#    include <OpenGL/gl.h>
+#    include <OpenGL/glu.h>
+#    include <FTGL/ftgl.h>
+#  endif
+#endif
 
 // external libs
 #include <SDL.h>
-#include <FTGL/ftgl.h>
 #include "SDL_opengl.h"
 
 // SPARK lib

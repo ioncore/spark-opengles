@@ -90,7 +90,7 @@ namespace SPK
 
 		virtual void innerUpdateTransform();
 
-	private :
+	//private :
 
 		Vector3D direction;
 		Vector3D tDirection;
@@ -114,12 +114,6 @@ namespace SPK
 	inline const Vector3D& StraightEmitter::getTransformedDirection() const
 	{
 		return tDirection;
-	}
-
-	inline void StraightEmitter::generateVelocity(Particle& particle,float speed) const
-	{
-		particle.velocity() = tDirection;
-		particle.velocity() *= speed;
 	}
 }
 

@@ -132,6 +132,10 @@ namespace GL
 		*/
 		static void restoreGLStates();
 
+#if TARGET_OS_IPHONE == 1
+                bool validateBlitSanity();
+#endif
+
 	protected :
 
 		/** @brief Inits the blending of this GLRenderer */

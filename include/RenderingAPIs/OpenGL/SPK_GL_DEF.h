@@ -47,16 +47,18 @@
 #endif
 
 #if defined(__APPLE__)
-#include <TargetConditionals.h>
-#if TARGET_OS_MAC
-#include <OpenGL/gl.h>
-#else
-#include <OpenGLES/ES1/gl.h>
-#endif
+#  include <TargetConditionals.h>
+#  if TARGET_IPHONE_SIMULATOR == 1
+#    include <OpenGLES/ES1/gl.h>
+#  elif TARGET_OS_IPHONE == 1
+#    include <OpenGLES/ES1/gl.h>
+#  elif TARGET_OS_MAC == 1
+#    include <OpenGL/gl.h>
+#  endif
 #elif defined(macintosh)
-#include <gl.h>
+#  include <gl.h>
 #else
-#include <GL/gl.h>
+#  include <GL/gl.h>
 #endif
 
 #if defined(linux) || defined(__linux)

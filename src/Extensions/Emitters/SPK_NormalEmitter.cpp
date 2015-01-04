@@ -72,5 +72,7 @@ namespace SPK
 		if (inverted) speed = -speed;
 		const Zone* zone = (normalZone == NULL ? getZone() : normalZone);
 		particle.velocity() = zone->computeNormal(particle.position()) * speed;
+		if(forced2D_)
+			particle.velocity().z = 0;
 	}
 }

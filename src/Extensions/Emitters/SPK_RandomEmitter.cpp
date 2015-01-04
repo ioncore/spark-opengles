@@ -30,7 +30,10 @@ namespace SPK
 		float norm;
 		do 
 		{
-			particle.velocity().set(random(-1.0f,1.0f),random(-1.0f,1.0f),random(-1.0f,1.0f));
+			if(forced2D_)
+				particle.velocity().set(random(-1.0f,1.0f), random(-1.0f,1.0f), 0.0f);
+			else
+				particle.velocity().set(random(-1.0f,1.0f), random(-1.0f,1.0f), random(-1.0f,1.0f));
 			norm = particle.velocity().getNorm();
 		}
 		while((norm > 1.0f) || (norm == 0.0f));

@@ -42,6 +42,8 @@ namespace SPK
 
 	void Particle::init()
 	{
+		isInitRPosition_ = false;
+
 		const Model* model = group->getModel();
 		data->age = 0.0f;
 		data->life = random(model->lifeTimeMin,model->lifeTimeMax);

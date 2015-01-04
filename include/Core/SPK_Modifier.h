@@ -189,6 +189,8 @@ namespace SPK
 
 		virtual Registerable* findByName(const std::string& name);
 
+		void forced2D(bool val) {forced2D_ = val;}
+
 	protected :
 
 		/** @brief the Vector3D that holds the intersection coordinates */
@@ -214,6 +216,8 @@ namespace SPK
 		virtual void destroyChildren(bool keepChildren);
 
 		virtual void propagateUpdateTransform();
+
+		bool forced2D_;
 
 	private :
 

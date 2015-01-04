@@ -99,12 +99,15 @@ namespace SPK
 
 	Group::~Group()
 	{
+	  //std::cout << "DEBUG: destroying group " << this << std::endl;
+
 		delete[] particleData;
 		delete[] particleCurrentParams;
 		delete[] particleExtendedParams;
 
 		// destroys additional buffers
 		destroyAllBuffers();
+		//std::cout << "DEBUG: group " << this << " destroyed" << std::endl;
 	}
 
 	void Group::registerChildren(bool registerAll)
@@ -141,6 +144,7 @@ namespace SPK
 	void Group::destroyChildren(bool keepChildren)
 	{
 		destroyChild(model,keepChildren);
+		//std::cout << "DEBUG: killing renderer " << renderer << std::endl;
 		destroyChild(renderer,keepChildren);
 
 		for (std::vector<Emitter*>::const_iterator it = emitters.begin(); it != emitters.end(); ++it)
@@ -570,7 +574,7 @@ namespace SPK
 
 	void Group::reallocate(size_t capacity)
 	{
-		if (capacity > pool.getNbReserved())
+		if (capacity != pool.getNbReserved())
 		{
 			pool.reallocate(capacity);
 

@@ -111,7 +111,10 @@ namespace SPK
 
 		particle.velocity().x = speed * (matrix[0] * x + matrix[1] * y + matrix[2] * z);
 		particle.velocity().y = speed * (matrix[3] * x + matrix[4] * y + matrix[5] * z);
-		particle.velocity().z = speed * (matrix[6] * x + matrix[7] * y + matrix[8] * z);
+		if(forced2D_)
+			particle.velocity().z = 0.;
+		else
+			particle.velocity().z = speed * (matrix[6] * x + matrix[7] * y + matrix[8] * z);
 	}
 
 	void SphericEmitter::innerUpdateTransform()

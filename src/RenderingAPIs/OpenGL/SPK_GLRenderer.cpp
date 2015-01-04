@@ -21,11 +21,15 @@
 
 
 #include "RenderingAPIs/OpenGL/SPK_GLRenderer.h"
+#include <stack>
 
 namespace SPK
 {
 namespace GL
 {
+
+std::stack<GLboolean> depthBufferStack;
+
 	GLRenderer::GLRenderer() :
 		Renderer(),
 		blendingEnabled(false),
@@ -62,20 +66,47 @@ namespace GL
 
 	void GLRenderer::saveGLStates()
 	{
-		/*markerpiglPushAttrib(GL_POINT_BIT |
-			GL_LINE_BIT |
-			GL_ENABLE_BIT |
-			GL_COLOR_BUFFER_BIT |
-			GL_CURRENT_BIT |
-			GL_TEXTURE_BIT |
-			GL_DEPTH_BUFFER_BIT |
-			GL_LIGHTING_BIT |
-			GL_POLYGON_BIT);
-        */
+#  if TARGET_OS_IPHONE == 1
+          GLboolean value = glIsEnabled(GL_DEPTH_BUFFER_BIT);
+          depthBufferStack.push(value);
+#  else
+          glPushAttrib(GL_POINT_BIT |
+            GL_LINE_BIT |
+            GL_ENABLE_BIT |
+            GL_COLOR_BUFFER_BIT |
+            GL_CURRENT_BIT |
+            GL_TEXTURE_BIT |
+            GL_DEPTH_BUFFER_BIT |
+            GL_LIGHTING_BIT |
+            GL_POLYGON_BIT);
+#  endif
 	}
 
 	void GLRenderer::restoreGLStates()
 	{
-		//markerpiglPopAttrib();
+#  if TARGET_OS_IPHONE == 1
+          if (!depthBufferStack.empty()) {
+            GLboolean value = depthBufferStack.top();
+            depthBufferStack.pop();
+            value ? glEnable(GL_DEPTH_BUFFER_BIT) : glDisable(GL_DEPTH_BUFFER_BIT);
+          } else {
+            printf("Stack is empty!\n");
+          }
+#  else
+		glPopAttrib();
+#endif
 	}
+
+#if TARGET_OS_IPHONE == 1
+        bool GLRenderer::validateBlitSanity() {
+          if (!depthBufferStack.empty()) {
+             printf("Validation failed\n");
+             while (!depthBufferStack.empty())
+               depthBufferStack.pop();
+             return false;
+          }
+          return true;
+        }
+#endif
+
 }}

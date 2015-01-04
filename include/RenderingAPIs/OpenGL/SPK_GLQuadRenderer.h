@@ -54,8 +54,8 @@ namespace GL
 	* </ul>
 	*/
 	class SPK_GL_PREFIX GLQuadRenderer :	public GLRenderer,
-											public QuadRendererInterface,
-											public Oriented3DRendererInterface,
+											virtual public QuadRendererInterface,
+											virtual public Oriented3DRendererInterface,
 											public GLExtHandler
 	{
 		SPK_IMPLEMENT_REGISTERABLE(GLQuadRenderer)
@@ -113,7 +113,7 @@ namespace GL
 
 		virtual bool checkBuffers(const Group& group);
 
-	private :
+	protected :
 
 		mutable float modelView[16];
 		mutable float invModelView[16];
@@ -130,12 +130,12 @@ namespace GL
 		static const std::string GPU_BUFFER_NAME;
 		static const std::string TEXTURE_BUFFER_NAME;
 
-		float* createTextureBuffer(const Group& group) const;
+		virtual float* createTextureBuffer(const Group& group) const;
 
 		void invertModelView() const;
 
 		void GLCallColorAndVertex(const Particle& particle) const;	// OpenGL calls for color and position
-		void GLCallTexture2DAtlas(const Particle& particle) const;	// OpenGL calls for 2D atlastexturing 
+		virtual void GLCallTexture2DAtlas(const Particle& particle) const;	// OpenGL calls for 2D atlastexturing
 		void GLCallTexture3D(const Particle& particle) const;		// OpenGL calls for 3D texturing
 
 		static void (GLQuadRenderer::*renderParticle)(const Particle&)  const;	// pointer to the right render method
@@ -172,6 +172,57 @@ namespace GL
 		float y = particle.position().y;
 		float z = particle.position().z;
 
+#if TARGET_OS_IPHONE == 1
+		// triangles are drawn in a counter clockwise order :
+
+// Top-left one
+		// top right vertex
+		*(gpuIterator++) = x + quadSide().x + quadUp().x;
+		*(gpuIterator++) = y + quadSide().y + quadUp().y;
+		*(gpuIterator++) = z + quadSide().z + quadUp().z;
+		gpuIterator += 4;
+
+		// top left vertex
+		*(gpuIterator++) = x - quadSide().x + quadUp().x;
+		*(gpuIterator++) = y - quadSide().y + quadUp().y;
+		*(gpuIterator++) = z - quadSide().z + quadUp().z;
+		gpuIterator += 4;
+
+		// bottom left
+		*(gpuIterator++) = x - quadSide().x - quadUp().x;
+		*(gpuIterator++) = y - quadSide().y - quadUp().y;
+		*(gpuIterator++) = z - quadSide().z - quadUp().z;
+
+		*(gpuIterator++) = particle.getR();
+		*(gpuIterator++) = particle.getG();
+		*(gpuIterator++) = particle.getB();
+		*(gpuIterator++) = particle.getParamCurrentValue(PARAM_ALPHA);
+
+// Bottom-right one
+
+		// bottom right
+		*(gpuIterator++) = x + quadSide().x - quadUp().x;
+		*(gpuIterator++) = y + quadSide().y - quadUp().y;
+		*(gpuIterator++) = z + quadSide().z - quadUp().z;
+		gpuIterator += 4;
+
+		// top right vertex
+		*(gpuIterator++) = x + quadSide().x + quadUp().x;
+		*(gpuIterator++) = y + quadSide().y + quadUp().y;
+		*(gpuIterator++) = z + quadSide().z + quadUp().z;
+		gpuIterator += 4;
+
+		// bottom left
+		*(gpuIterator++) = x - quadSide().x - quadUp().x;
+		*(gpuIterator++) = y - quadSide().y - quadUp().y;
+		*(gpuIterator++) = z - quadSide().z - quadUp().z;
+
+		*(gpuIterator++) = particle.getR();
+		*(gpuIterator++) = particle.getG();
+		*(gpuIterator++) = particle.getB();
+		*(gpuIterator++) = particle.getParamCurrentValue(PARAM_ALPHA);
+
+#else
 		// quads are drawn in a counter clockwise order :
 		// top right vertex
 		*(gpuIterator++) = x + quadSide().x + quadUp().x;
@@ -200,12 +251,35 @@ namespace GL
 		*(gpuIterator++) = particle.getG();
 		*(gpuIterator++) = particle.getB();
 		*(gpuIterator++) = particle.getParamCurrentValue(PARAM_ALPHA);
+#endif
 	}
 
 	inline void GLQuadRenderer::GLCallTexture2DAtlas(const Particle& particle) const
 	{
 		computeAtlasCoordinates(particle);
 
+#if TARGET_OS_IPHONE == 1
+// Top-left triangle
+		*(textureIterator++) = textureAtlasU1();
+		*(textureIterator++) = textureAtlasV0();
+
+		*(textureIterator++) = textureAtlasU0();
+		*(textureIterator++) = textureAtlasV0();
+
+		*(textureIterator++) = textureAtlasU0();
+		*(textureIterator++) = textureAtlasV1();
+
+// Bottom-right triangle
+		*(textureIterator++) = textureAtlasU1();
+		*(textureIterator++) = textureAtlasV1();	
+
+		*(textureIterator++) = textureAtlasU1();
+		*(textureIterator++) = textureAtlasV0();
+
+		*(textureIterator++) = textureAtlasU0();
+		*(textureIterator++) = textureAtlasV1();
+
+#else
 		*(textureIterator++) = textureAtlasU1();
 		*(textureIterator++) = textureAtlasV0();
 
@@ -217,6 +291,7 @@ namespace GL
 
 		*(textureIterator++) = textureAtlasU1();
 		*(textureIterator++) = textureAtlasV1();	
+#endif
 	}
 
 	inline void GLQuadRenderer::GLCallTexture3D(const Particle& particle) const

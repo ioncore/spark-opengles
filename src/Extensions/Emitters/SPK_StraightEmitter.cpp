@@ -25,6 +25,14 @@
 
 namespace SPK
 {
+	void StraightEmitter::generateVelocity(Particle& particle,float speed) const
+	{
+		particle.velocity() = tDirection;
+		particle.velocity() *= speed;
+		if(forced2D_)
+			particle.velocity().z = 0;
+	}
+
 	StraightEmitter::StraightEmitter(const Vector3D& direction) :
 		Emitter()
 	{

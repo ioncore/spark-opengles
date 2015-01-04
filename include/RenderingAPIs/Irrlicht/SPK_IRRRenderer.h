@@ -26,6 +26,7 @@
 
 #include "RenderingAPIs/Irrlicht/SPK_IRR_DEF.h"
 #include "RenderingAPIs/Irrlicht/SPK_IRRBuffer.h"
+#include "RenderingAPIs/Irrlicht/SPK_IRRMaterialProxy.h"
 #include "Core/SPK_Renderer.h"
 #include "Core/SPK_Group.h"
 
@@ -117,11 +118,21 @@ namespace IRR
 		/**
 		* @brief Gets the material of this renderer
 		*
-		* Note that the renderer is constant and therefore cannot be modified directly
+		* Note that the material is constant and therefore cannot be modified directly
 		*
 		* @return the material of this renderer
 		*/
 		const irr::video::SMaterial& getMaterial() const;
+
+		/**
+		* @brief Gets a proxy for the material of this renderer
+		*
+		* The material proxy allows to modify some parameters of the underlying Irrlicht material
+		*
+		* @return a material proxy
+		* @since 1.5.6
+		*/
+		IRRMaterialProxy getMaterialProxy() { return IRRMaterialProxy(material); }
 
 		virtual bool isRenderingHintEnabled(RenderingHint renderingHint) const;
 

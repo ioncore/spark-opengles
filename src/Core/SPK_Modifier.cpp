@@ -37,7 +37,8 @@ namespace SPK
 		needsNormal(needsNormal),
 		full(false),
 		active(true),
-		local(false)
+		local(false),
+		forced2D_(false)
 	{}
 
 	void Modifier::registerChildren(bool registerAll)

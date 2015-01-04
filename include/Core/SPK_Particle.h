@@ -126,6 +126,9 @@ namespace SPK
 		*/
 		Vector3D& position();
 
+		Vector3D& rposition();
+		bool isInitRPosition_;
+
 		/**
 		* @brief Gets the velocity of the Particle
 		* @return the velocity of this Particle
@@ -304,6 +307,7 @@ namespace SPK
 		{
 			Vector3D oldPosition;
 			Vector3D position;
+			Vector3D rposition;
 			Vector3D velocity;
 			float age;
 			float life;
@@ -344,6 +348,10 @@ namespace SPK
 	inline Vector3D& Particle::position()
 	{
 		return data->position;
+	}
+	inline Vector3D& Particle::rposition()
+	{
+		return data->rposition;
 	}
 
 	inline Vector3D& Particle::velocity()
