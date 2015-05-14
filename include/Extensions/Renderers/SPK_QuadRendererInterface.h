@@ -255,6 +255,11 @@ namespace SPK
 	inline void QuadRendererInterface::computeAtlasCoordinates(const Particle& particle) const
 	{
 		int textureIndex = static_cast<int>(particle.getParamCurrentValue(PARAM_TEXTURE_INDEX));
+
+		//checking if the index more than the maximum allowable value
+		while (textureIndex >= (textureAtlasNbX * textureAtlasNbY))
+			textureIndex -= (textureAtlasNbX * textureAtlasNbY);
+
 		atlasU0 = atlasU1 = static_cast<float>(textureIndex % textureAtlasNbX) / textureAtlasNbX;
 		atlasV0 = atlasV1 = static_cast<float>(textureIndex / textureAtlasNbX) / textureAtlasNbY;
 		atlasU1 += textureAtlasW;

@@ -31,7 +31,9 @@ namespace SPK
 		tForce(force),
 		factorType(type),
 		factorParam(param)
-	{}
+	{
+		setTrigger(trigger);
+	}
 
 	void LinearForce::modify(Particle& particle,float deltaTime) const
 	{

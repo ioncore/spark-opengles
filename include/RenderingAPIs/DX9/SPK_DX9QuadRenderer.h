@@ -223,6 +223,10 @@ namespace DX9
 	{
 		float textureIndex = particle.getParamCurrentValue(PARAM_TEXTURE_INDEX);
 
+		//checking if the index more than the maximum allowable value
+		while (textureIndex >= (textureAtlasNbX * textureAtlasNbY))
+			textureIndex -= (textureAtlasNbX * textureAtlasNbY);
+
 		*(textureIterator + 2) = textureIndex;
 		*(textureIterator + 5) = textureIndex;
 		*(textureIterator + 8) = textureIndex;
